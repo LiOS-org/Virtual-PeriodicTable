@@ -21,3 +21,14 @@ document.addEventListener('click', function(event) {
         }
     }
 });
+// Place in your main.js or in a <script> tag
+document.addEventListener("DOMContentLoaded", function() {
+    const groups = document.querySelectorAll('.table ');
+    let maxHeight = 0;
+    groups.forEach(g => {
+        maxHeight = Math.max(maxHeight, g.offsetHeight);
+    });
+    groups.forEach(g => {
+        g.style.height = maxHeight + "px";
+    });
+});

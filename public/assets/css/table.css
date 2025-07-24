@@ -16,6 +16,7 @@
     font-size: clamp(10px, 2vw + 1rem, 14px);
     border-radius: 5px;
     margin: 0.5 0.5 0.5 0.5;
+    transition: all 0.5s ease-in-out;
 }
 .element_container:target {
     animation: element_on_target 1.2s ease-in-out 0s 3;
@@ -59,67 +60,31 @@
     font-size: clamp(10px, 2vw + 1rem, 14px);
     text-align: center;
 }
-/* Layers */
-.first_layer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-.second_layer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-.third_layer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-.group{
-    display: flex;
-}
-.fourth_layer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-.fifth_layer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-.sixth_layer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-.seventh_layer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
 .radioactive_elements{
-    display: block;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: scroll;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 50%;
+    margin-right: 50%;
+    transform: translateX(-50%);
+    overflow-x: scroll;
     border-radius: 5px;
     margin-top: 50px;
+    flex-direction: column;
+    background: var(--frosted_primary);
+    padding: 2px;
+}
+.radioactive_elements .element_container{
+    margin: 0 0 2px 2px;
 }
 .lanthanoids_group , .actinoids_group{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    width: fit-content;
     background: transparent;
+    margin: 2px 2px;
+    padding: 2px;
 }
 /* On Hover Effects  */
 .element_container:hover{
@@ -134,8 +99,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    left: 0;
-    top: 0;
+    inset: 0;
     z-index: 1000;
     background: var(--frosted_white); /* Semi-transparent backdrop */
     backdrop-filter: blur(5px);
@@ -163,6 +127,7 @@
     background: var(--frosted_primary);
     border-radius: 5px;
     margin: 2px 2px;
+    padding: 2px;
 }
 .groups_container{
     display: flex;

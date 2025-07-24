@@ -1,10 +1,10 @@
 .legend{
     display: flex;
-    max-width: 55%;
-    margin: auto auto;
     height: auto;
-    padding: auto;
     background: transparent;
+    margin-left: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
     border-radius: 5px;
 }
 .properties{
@@ -17,10 +17,11 @@
     flex-wrap: wrap;
 }
 .properties .properties_group{
-    display: flexbox;
+    display: flex;
     background: var(--frosted_primary);
     width: auto;
     border-radius: 5px;
+    flex-direction: column;
     margin: 10px 10px 10px 10px;
 }
 .properties_listing{
@@ -32,9 +33,3 @@
     margin: 10px 10px 10px 10px;
     display: block;
 }
-/* On Focus events
-.alkali_metal:hover ~ .alkali_metal {
-    z-index: 5;
-    scale: 1.1;
-    transition: all 0.5s;
-} */

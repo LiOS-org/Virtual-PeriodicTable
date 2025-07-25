@@ -35,7 +35,7 @@
     margin-left: auto;
 }
 .title_bar a:link{
-    color: var(--white);
+    color: var(--primary);
 }
 .window .main_content{
     display: flex;

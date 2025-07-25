@@ -2,11 +2,13 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    max-width: fit-content;
+    flex-wrap: nowrap;
     margin-left: auto;
     margin-right: auto;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     align-items: flex-end;
+    scroll-snap-type: x mandatory;
 }
 .element_container{
     display: flexbox;
@@ -43,36 +45,37 @@
 .element_container .atomic_no{
     width: 100%;
     text-align: left;
-    font-size: 11px;
+    font-size: 12px;
+    font-family: jetBrainsMono;
 }
 .element_container .symbol{
-    font-size:clamp(22px, 2vw + 1rem, 32px);
-    font-weight: bold;
+    font-size:28px;
+    font-family: jetBrainsMono;
     text-align: center;
 }
 .element_container .name{
     text-align: center;
-    font-size: clamp(10px, 2vw + 1rem, 14px);
+    font-size: 12px;
+    font-family: workSans;
     width: 72px;
     overflow-wrap: break-word;
 }
 .element_container .mass{
     font-size: clamp(10px, 2vw + 1rem, 14px);
     text-align: center;
+    font-family: jetBrainsMono;
 }
 .radioactive_elements{
     display: flex;
     width: fit-content;
+    max-width: 100%;
     height: fit-content;
     margin-left: 50%;
     margin-right: 50%;
     transform: translateX(-50%);
-    overflow-x: scroll;
-    border-radius: 5px;
     margin-top: 50px;
+    overflow: scroll;
     flex-direction: column;
-    background: var(--frosted_primary);
-    padding: 2px;
 }
 .radioactive_elements .element_container{
     margin: 0 0 2px 2px;
@@ -83,8 +86,12 @@
     flex-wrap: nowrap;
     width: fit-content;
     background: transparent;
+    overflow-x: scroll;
+    overflow-y: hidden;
     margin: 2px 2px;
-    padding: 2px;
+    border-radius: 5px;
+    padding: 10px;
+    background: var(--frosted_primary);
 }
 /* On Hover Effects  */
 .element_container:hover{
@@ -128,6 +135,7 @@
     border-radius: 5px;
     margin: 2px 2px;
     padding: 2px;
+    overflow: visible;
 }
 .groups_container{
     display: flex;

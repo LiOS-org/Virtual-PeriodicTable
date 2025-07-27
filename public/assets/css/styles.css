@@ -8,6 +8,7 @@
      
 }
 :root{
+    background: linear-gradient(45deg, var(--secondary) var(--stop), var(--primary));
     animation: root-background 50s linear infinite;
     width: 100%;
 

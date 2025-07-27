@@ -14,15 +14,30 @@
     display: flexbox;
     height: 100px!important;
     flex: 1 1 27px;
-    width: 72.3px!important;
+    width: 72.3px;
     font-size: clamp(10px, 2vw + 1rem, 14px);
     border-radius: 5px;
     margin: 0.5 0.5 0.5 0.5;
     transition: all 0.5s ease-in-out;
+    overflow: hidden;
 }
 .element_container:target {
     animation: element_on_target 1.2s ease-in-out 0s 3;
     z-index: 5;
+}
+.element_container .definition{
+    margin-top:100%;
+    margin-bottom: auto;
+    background: var(--frosted_white);
+    text-wrap: wrap;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    border-radius: inherit;
+    max-height: inherit;
+    max-width: inherit;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    color: var(--black);
 }
 @keyframes element_on_target {
     0% {
@@ -97,8 +112,16 @@
 .element_container:hover{
     z-index: 10;
     scale: 1.1;
-    transition: all 0.5s;
+    position: sticky;
     cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.element_container:hover .definition{
+    margin-top: 0%;
+    transform: translateY(-85%);
+    margin-bottom: auto;
+    overflow-y: scroll;
+    transition: all 0.5s ease-in-out;
 }
 /* VVS Description */
 #iframe_container{

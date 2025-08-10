@@ -5,6 +5,7 @@
     --primary: #ff7799;
     --secondary: #8601bf ;
     --tertiary: #006e6e; 
+    --red:#c01b0c;
     /* For Frosted Background (if any element has frosted background applied it expects a background with some level of transparency or it might break) */
     --frosted_black:var(--000022);
     --frosted_white:var(--deedeb);

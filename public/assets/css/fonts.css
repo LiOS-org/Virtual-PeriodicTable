@@ -1,15 +1,15 @@
-@font-face{
-    font-family: reenieBeanie;
-    src:url(../fonts/ReenieBeanie-Regular.ttf) format('truetype');
+@font-face {
+  font-family: reenieBeanie;
+  src: url(../fonts/ReenieBeanie-Regular.ttf) format("truetype");
 }
-@font-face{
-    font-family: jetBrainsMono;
-    src: url(../fonts/JetBrainsMono-VariableFont_wght.ttf);
+@font-face {
+  font-family: jetBrainsMono;
+  src: url(../fonts/JetBrainsMono-VariableFont_wght.ttf);
 }
-@font-face{
-    font-family: workSans;
-    src: url(../fonts/WorkSans-VariableFont_wght.ttf);
+@font-face {
+  font-family: workSans;
+  src: url(../fonts/WorkSans-VariableFont_wght.ttf);
 }
-:root{
-    font-family: serif;
+:root {
+  font-family: serif;
 }

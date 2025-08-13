@@ -1,29 +1,36 @@
-.lios-window-container{
-    color: var(--white);
-    background: var(--frosted_white);
+.lios-window-container {
+  color: var(--white);
+  background: var(--frosted_white);
 }
-.lios-window-close{
-    background: var(--red);
+.lios-window-close {
+  background: var(--red);
 }
-.lios-window-titlebar{
-    overflow: hidden;
+.lios-window-titlebar {
+  overflow: hidden;
 }
-.lios-window-card{
-    background: var(--frosted_white);
+.lios-window-card {
+  background: var(--frosted_white);
+  overflow: hidden;
 }
-.lios-window-value-row{
-    text-decoration: none;
-    color: var(--secondary);
-    transition: all 0.3s ease-in-out;
+.lios-window-value-row {
+  text-decoration: none;
+  color: var(--secondary);
+  transition: all 0.3s ease-in-out;
 }
-.lios-window-value-row:hover{
-    background: var(--frosted_white);
-    transition: all 0.3s ease-in-out;
+.lios-window-value-row:hover {
+  background: var(--frosted_white);
+  transition: all 0.3s ease-in-out;
 }
-#About .favicon{
-    display: block;
-    width: 20%;
-    margin-left: 40%;
-    margin-right: 40%;
-    border-radius: 100vh;
+#About .favicon {
+  display: block;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+  border-radius: 100vh;
+}
+.more-from-us {
+  width: max-content;
+  margin-left: 50%;
+  margin-right: 50%;
+  transform: translateX(-50%);
 }

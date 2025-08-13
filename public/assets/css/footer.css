@@ -1,44 +1,44 @@
-#footer{
-    background: var(--frosted_primary);
-    display: flex;
-    width: 80%;
-    margin-left: 50%;
-    margin-right: 50%;
-    transform: translateX(-50%);
-    border-radius: 5px;
-    flex-direction: column;
-    font-family: reenieBeanie;
-    font-weight: bolder;
+#footer {
+  background: var(--frosted_primary);
+  display: flex;
+  width: 80%;
+  margin-left: 50%;
+  margin-right: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  flex-direction: column;
+  font-family: reenieBeanie;
+  font-weight: bolder;
 }
 #footer h1 {
-    color: var(--black);
-    text-align: center;
-    text-wrap: nowrap;
-    animation: header_animation 10s infinite;
-    transition: all 0.5s ease-in-out;
-    color: var(--black);
+  color: var(--black);
+  text-align: center;
+  text-wrap: nowrap;
+  animation: header_animation 10s infinite;
+  transition: all 0.5s ease-in-out;
+  color: var(--black);
 }
 #footer p {
-    color: var(--black);
-    text-align: center;
-    font-size: 24px;
-    line-height: 1.5;
+  color: var(--black);
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.5;
 }
-.LiOS{
-    display: flex;
-    flex-direction: row;
-    text-decoration: none;
-    width: fit-content;
-    margin-left: 50%;
-    margin-right: 50%;
-    transform: translateX(-50%);
+.LiOS {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  width: fit-content;
+  margin-left: 50%;
+  margin-right: 50%;
+  transform: translateX(-50%);
 }
-.LiOS .element_container{
-    display: inline-block;
-    max-width: 72.3px;
-    margin-left: 2px;
-    margin-right: 2px;
+.LiOS .element_container {
+  display: inline-block;
+  max-width: 72.3px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
-.LiOS .element_container:hover{
-    transform: scale(none);
+.LiOS .element_container:hover {
+  transform: scale(none);
 }

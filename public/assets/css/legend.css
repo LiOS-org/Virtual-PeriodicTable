@@ -1,36 +1,50 @@
-.legend {
+#legend{
   display: flex;
-  height: auto;
-  background: transparent;
-  margin-left: 50%;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  border-radius: 5px;
+
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: center;
 }
-.properties {
+#legend > .lios-card{
   display: flex;
-  width: auto;
-  height: auto;
-  color: var(--black);
-  font-size: 32px;
+  z-index: unset;
+  margin-bottom: auto;
   text-align: center;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-.properties .properties_group {
-  display: flex;
-  background: var(--frosted_primary);
-  width: auto;
-  border-radius: 5px;
   flex-direction: column;
-  margin-top: 10px;
+  background: var(--frosted_primary);
+  justify-content: center;
 }
-.properties_listing {
-  font-size: 22px;
-  color: var(--frosted_white);
-  text-align: center;
-  height: auto;
-  border-radius: 5px;
-  margin: 10px 10px 10px 10px;
-  display: block;
+#legend .lios-card{
+  margin-top: 2px;
 }
+#legend .lios-card a{
+  text-decoration: none;
+  width: 200px;
+  flex: 1;
+}
+.lios-card.alkali_matal{
+  background: var(--color_Alkali_Metals);
+}
+/* 
+#alkali-metal:target .alkali_metal{
+  box-shadow: 0 0 15px var(--red);
+  animation: element-on-target 1s ease-in-out infinite;
+}
+#alkaline-earth-metal:target .alkaline_earth_metal{
+  box-shadow: 0 0 15px var(--red);
+  animation: element-on-target 1s ease-in-out infinite;
+}
+@keyframes element-on-target {
+  0% {
+    box-shadow: 0 0 0px var(--red);
+  }
+  25% {
+    box-shadow: 0 0 30px var(--red);
+  }
+  50%{
+    box-shadow: 0 0 60px var(--red);
+  }
+  100% {
+    box-shadow: 0 0 5px var(--red);
+  }
+} */

@@ -67,14 +67,14 @@
   background: var(--color_Metalloids);
 }
 .gas {
-  color: var(--color_gas);
+  color: var(--color_gas)!important;
 }
 .solid {
-  color: var(--color_Solid);
+  color: var(--color_Solid)!important;
 }
 .liquid {
-  color: var(--color_liquid);
+  color: var(--color_liquid)!important;
 }
 .unknown {
-  color: var(--color_unknown);
+  color: var(--color_unknown)!important;
 }

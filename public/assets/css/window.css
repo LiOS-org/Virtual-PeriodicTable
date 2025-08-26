@@ -1,6 +1,10 @@
 .lios-window-container {
   color: var(--white);
   background: var(--frosted_white);
+  overflow: hidden;
+}
+.lios-window-container > hr{
+  width: 100%;
 }
 .lios-window-close {
   background: var(--red);

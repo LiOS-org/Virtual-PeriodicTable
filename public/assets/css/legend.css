@@ -1,9 +1,8 @@
 #legend{
   display: flex;
-
-  overflow: hidden;
   flex-direction: row;
   justify-content: center;
+  margin-top: 20px;
 }
 #legend > .lios-card{
   display: flex;
@@ -12,18 +11,28 @@
   text-align: center;
   flex-direction: column;
   background: var(--frosted_primary);
-  justify-content: center;
+}
+#legend .lios-card-title{
+  color: var(--black);
 }
 #legend .lios-card{
   margin-top: 2px;
+  color: var(--frosted_white);
+  height: 300px;
+}
+#legend .lios-card .lios-card{
+  width: 150px;
+  height: fit-content;
 }
 #legend .lios-card a{
   text-decoration: none;
-  width: 200px;
-  flex: 1;
+
 }
 .lios-card.alkali_matal{
   background: var(--color_Alkali_Metals);
+}
+.lios-card.states > .lios-card{
+  background: var(--secondary);
 }
 /* 
 #alkali-metal:target .alkali_metal{

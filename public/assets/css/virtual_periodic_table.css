@@ -1,5 +1,4 @@
-@import url(https://lios-open.web.app/LiOS_Open.css);
-@import url(https://lios-colors.web.app/dist/custom_color_definitions.css);
+@import url(../../LiOS-Open/public/LiOS_Open.css);
 @import url(color_palette.css);
 @import url(styles.css);
 @import url(legend.css);

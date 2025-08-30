@@ -1,4 +1,12 @@
 nav {
   color: var(--secondary);
-  max-height: 30px;
+}
+.lios-nav-title{
+  align-items: center;
+  display: flex;
+}
+.lios-nav-title img {
+  height: 30px;
+  width: 30px;
+  border-radius: 100vh;
 }

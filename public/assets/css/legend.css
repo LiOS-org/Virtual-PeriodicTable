@@ -18,42 +18,15 @@
 #legend .lios-card{
   margin-top: 2px;
   color: var(--frosted_white);
-  height: 300px;
-}
-#legend .lios-card .lios-card{
-  width: 150px;
-  height: fit-content;
-}
-#legend .lios-card a{
-  text-decoration: none;
-
+  height: max-content;
 }
 .lios-card.alkali_matal{
   background: var(--color_Alkali_Metals);
 }
-.lios-card.states > .lios-card{
+.lios-card.states > .lios-button{
   background: var(--secondary);
 }
-/* 
-#alkali-metal:target .alkali_metal{
-  box-shadow: 0 0 15px var(--red);
-  animation: element-on-target 1s ease-in-out infinite;
+#legend .lios-card .lios-button{
+  margin-top: 2px;
+  border-radius: inherit;
 }
-#alkaline-earth-metal:target .alkaline_earth_metal{
-  box-shadow: 0 0 15px var(--red);
-  animation: element-on-target 1s ease-in-out infinite;
-}
-@keyframes element-on-target {
-  0% {
-    box-shadow: 0 0 0px var(--red);
-  }
-  25% {
-    box-shadow: 0 0 30px var(--red);
-  }
-  50%{
-    box-shadow: 0 0 60px var(--red);
-  }
-  100% {
-    box-shadow: 0 0 5px var(--red);
-  }
-} */

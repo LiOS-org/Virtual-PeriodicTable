@@ -33,48 +33,68 @@
   --color_lanthanoids: #3d2d1a;
   --color_actinoids: #6b324b;
 }
-.reactive_nonmetal {
+.reactive_nonmetal, .filter-reactive_nonmetal {
   background: var(--color_Reactive_nonmetal);
+  cursor: pointer;
 }
-.alkaline_earth_metal {
+.alkaline_earth_metal, .filter-alkaline_earth_metal {
   background: var(--color_Alkaline_Earth_Metals);
+  cursor: pointer;
 }
-.transition_metal {
+.transition_metal, .filter-transition_metal {
   background: var(--color_Transition_Metals);
+  cursor: pointer;
 }
-.alkali_metal {
+.alkali_metal, .filter-alkali_metal {
   background: var(--color_Alkali_Metals);
+  cursor: pointer;
 }
-.synthetic_elements {
+.synthetic_elements, .filter-synthetic_elements {
   background: var(--color_Synthetic_elements);
+  cursor: pointer;
 }
-.post_transition_metal {
+.post_transition_metal, .filter-post_transition_metal {
   background: var(--color_Post-Transition_Metals);
+  cursor: pointer;
 }
-.transition_metal {
+.transition_metal, .filter-transition_metal {
   background: var(--color_Transition_Metals);
+  cursor: pointer;
 }
-.lanthanoids {
+.lanthanoids, .filter-lanthanoids {
   background: var(--color_lanthanoids);
+  cursor: pointer;
 }
-.actinoids {
+.actinoids, .filter-actinoids {
   background: var(--color_actinoids);
+  cursor: pointer;
 }
-.noble_gas {
+.noble_gas, .filter-noble_gas {
   background: var(--color_Noble_Gas);
+  cursor: pointer;
 }
-.metalloids {
+.metalloids, .filter-metalloids {
   background: var(--color_Metalloids);
+  cursor: pointer;
 }
-.gas {
+.gas, .filter-gas {
   color: var(--color_gas)!important;
+  cursor: pointer;
 }
-.solid {
+.solid, .filter-solid {
   color: var(--color_Solid)!important;
+  cursor: pointer;
 }
-.liquid {
+.liquid, .filter-liquid {
   color: var(--color_liquid)!important;
+  cursor: pointer;
 }
-.unknown {
+.unknown, .filter-unknown {
   color: var(--color_unknown)!important;
+  cursor: pointer;
+}
+.filter-reset {
+  color: var(--primary)!important;
+  background: var(--secondary)!important;
+  cursor: pointer;
 }

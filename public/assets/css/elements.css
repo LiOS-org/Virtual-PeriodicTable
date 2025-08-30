@@ -1,0 +1,40 @@
+.elements-page .main_container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 100%;
+  inset: 0;
+}
+.elements-page .main_container .lios-card{
+    background: var(--frosted_white);
+}
+.elements-page .main_container .side-panel {
+    display: flex;
+    min-height: 80%;
+    width: 300px;
+    margin-bottom: auto;
+    z-index: unset;
+    margin-left: 5px;
+    flex-direction: column;
+}
+.side-panel .element-symbol {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+    margin-left: 50%;
+    margin-right: 50%;
+    transform: translateX(-50%);
+}
+.element-symbol .symbol{
+    font-size: 32px;
+}
+.side-panel .lios-card{
+    width: 90%;
+}
+.side-panel .lios-card .lios-window-value-row{
+    border: none;
+}

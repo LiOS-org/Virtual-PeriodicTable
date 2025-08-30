@@ -1,3 +1,4 @@
 nav {
   color: var(--secondary);
+  max-height: 30px;
 }

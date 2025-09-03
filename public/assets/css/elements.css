@@ -1,40 +1,85 @@
-.elements-page .main_container {
+.elements-page {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  height: 100%;
-  inset: 0;
+  background: var(--frosted_white);
+  width: 100%;
 }
-.elements-page .main_container .lios-card{
-    background: var(--frosted_white);
+
+.lios-card-container  .lios-card {
+  background: var(--frosted_white);
 }
-.elements-page .main_container .side-panel {
-    display: flex;
-    min-height: 80%;
-    width: 300px;
-    margin-bottom: auto;
-    z-index: unset;
-    margin-left: 5px;
-    flex-direction: column;
-}
-.side-panel .element-symbol {
-    height: 100px;
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: inherit;
-    margin-left: 50%;
-    margin-right: 50%;
-    transform: translateX(-50%);
-}
-.element-symbol .symbol{
-    font-size: 32px;
+/* Panel Padding */
+.elements-main-panel,.side-panel{
+  padding-left: 0px;
+  padding-right: 0px;
+  justify-items: center;
 }
 .side-panel .lios-card{
-    width: 90%;
+  --padding:4px;
+  padding: var(--padding);
 }
-.side-panel .lios-card .lios-window-value-row{
-    border: none;
+/* Ends */
+@media screen and (min-width: 400px) {
+.lios-card-container{
+  flex-direction: row;
+}
+  .side-panel {
+  display: flex;
+  min-height: 80%;
+  width: 300px;
+  margin-bottom: auto;
+  z-index: unset;
+  flex-direction: column;
+}
+.elements-main-panel{
+  width: calc(100% - 342px);
+} 
+}
+@media screen and  (max-width: 399px) {
+  .elements-main-panel{
+  width: 100%;
+  }
+  .side-panel {
+  display: flex;
+  height: max-content;
+  width: 100%;
+  flex-direction: column;
+}
+.lios-card-container{
+  flex-direction: column;
+}
+}
+
+.side-panel .element-symbol {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  margin-left: 50%;
+  margin-right: 50%;
+  transform: translateX(-50%);
+}
+.element-symbol .symbol {
+  font-size: 32px;
+}
+.side-panel .lios-card {
+  width: calc(90% - var(--padding) * 2);
+  margin-left: calc(5% + var(--padding));
+  margin-right: calc(5% + var(--padding));
+}
+.side-panel .lios-card .lios-window-value-row {
+  border: none;
+}
+.elements-main-panel h1{
+  text-align: center;
+  color: var(--white);
+}
+.elements-main-panel p{
+  --lios-card-padding:4px;
+  padding: var(--lios-card-padding);
+  width: calc(90% - var(--lios-card-padding) * 2);
+  margin-left: calc(2.5% + var(--lios-card-padding));
+  margin-right: calc(2.5% + var(--lios-card-padding));
 }

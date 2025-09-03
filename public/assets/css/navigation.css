@@ -1,5 +1,7 @@
-nav {
+.lios-header-nav {
   color: var(--secondary);
+  max-height: fit-content;
+  justify-self: center;
 }
 .lios-nav-title{
   align-items: center;

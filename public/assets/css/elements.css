@@ -2,8 +2,16 @@
   display: flex;
   background: var(--frosted_white);
   width: 100%;
+  margin-top: 15px;
+  margin-bottom: auto;
 }
-
+.elements-main-panel .lios-card-container{
+  z-index: unset;
+}
+.elements-main-panel .lios-card-container img{
+  width: 80%;
+  height: 200px;
+}
 .lios-card-container  .lios-card {
   background: var(--frosted_white);
 }
@@ -16,6 +24,7 @@
 .side-panel .lios-card{
   --padding:4px;
   padding: var(--padding);
+  justify-self: center;
 }
 /* Ends */
 @media screen and (min-width: 400px) {
@@ -24,7 +33,6 @@
 }
   .side-panel {
   display: flex;
-  min-height: 80%;
   width: 300px;
   margin-bottom: auto;
   z-index: unset;
@@ -69,10 +77,11 @@
   margin-left: calc(5% + var(--padding));
   margin-right: calc(5% + var(--padding));
 }
-.side-panel .lios-card .lios-window-value-row {
+.side-panel .lios-card .lios-window-value-row,
+.elements-main-panel .lios-card .lios-window-value-row {
   border: none;
 }
-.elements-main-panel h1{
+.elements-main-panel h1,h2{
   text-align: center;
   color: var(--white);
 }

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Adjusts the height of the .table according to the contents within it
     const groups = document.querySelectorAll('.table ');
     let maxHeight = 0;
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     elementContainer.forEach(element => {
         const name = element.querySelector('.name').textContent;
         const elementLink = `elements/${name}`;
-        element.addEventListener("click", function() {
+        element.addEventListener("click", function () {
             window.location.href = elementLink;
         });
     });
@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     metalloid.addEventListener("click", metalloidClicked);
-    function metalloidClicked(mc) { 
+    function metalloidClicked(mc) {
         console.log("Transition metals clicked");
         alkalineEarthMetals.forEach(element => {
             element.style.opacity = "0.1";
@@ -291,7 +291,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     lanthanoid.addEventListener("click", lanthanoidClicked);
-    function lanthanoidClicked(lc) { 
+    function lanthanoidClicked(lc) {
         console.log("Transition metals clicked");
         alkalineEarthMetals.forEach(element => {
             element.style.opacity = "0.1";
@@ -361,7 +361,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     synthetic.addEventListener("click", syntheticClicked);
-    function syntheticClicked(sc) { 
+    function syntheticClicked(sc) {
         console.log("Transition metals clicked");
         alkalineEarthMetals.forEach(element => {
             element.style.opacity = "0.1";
@@ -434,7 +434,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     liquid.addEventListener("click", liquidClicked);
-    function liquidClicked(lc) { 
+    function liquidClicked(lc) {
         console.log("Transition metals clicked");
         alkalineEarthMetals.forEach(element => {
             element.style.opacity = "0.1";
@@ -472,7 +472,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     gas.addEventListener("click", gasClicked);
-    function gasClicked(gc) { 
+    function gasClicked(gc) {
         console.log("Transition metals clicked");
         alkalineEarthMetals.forEach(element => {
             element.style.opacity = "0.1";

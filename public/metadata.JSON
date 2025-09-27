@@ -1,0 +1,14 @@
+{
+    "projectName" : "Virtual Periodic Table",
+    "version" : "3.0.0-alpha-3",
+    "versionName" : "Short n' Descriptive",
+    "channel" : "alpha",
+    "github" : "https://github.com/LiOS-org/Virtual-PeriodicTable",
+    "licenses" : [
+        {
+            "for" : "Source Code",
+            "license" : "GPL-3.0",
+            "copy" : "https://github.com/LiOS-org/Virtual-PeriodicTable?tab=GPL-3.0-1-ov-file"
+        }
+    ]
+}

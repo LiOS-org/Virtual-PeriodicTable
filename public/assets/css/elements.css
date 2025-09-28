@@ -7,6 +7,10 @@
 }
 .elements-main-panel .lios-card-container{
   z-index: unset;
+  justify-items: center;
+  margin: 5px;
+  justify-content: start;
+  align-items: start;
 }
 .elements-main-panel .lios-card-container img{
   width: 80%;
@@ -14,6 +18,8 @@
 }
 .lios-card-container  .lios-card {
   background: var(--frosted_white);
+  max-height: fit-content;
+  align-self: flex-start;
 }
 /* Panel Padding */
 .elements-main-panel,.side-panel{

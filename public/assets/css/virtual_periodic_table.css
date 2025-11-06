@@ -1,5 +1,10 @@
+/* Additional LiOS-Open modules imports */
+@import url(../../LiOS-Open/public/modules/css/loaders.css);
+/* Virtual Periodic Table Styles */
 @import url(../../LiOS-Open/public/LiOS_Open.css);
 @import url(color_palette.css);
+@import url(lios-config.css);
+@import url(loader.css);
 @import url(styles.css);
 @import url(legend.css);
 @import url(table.css);
@@ -9,5 +14,4 @@
 @import url(window.css);
 @import url(footer.css);
 @import url(fonts.css);
-@import url(lios-config.css);
 @import url(elements.css);

@@ -11,3 +11,4 @@ WARP.md
 .DS_Store
 public/.DS_Store
 node_modules
+.hintrc

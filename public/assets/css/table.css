@@ -1,150 +1,240 @@
-/* Grid styling starts */
-.periodic_table{
-    display: grid;
-    grid-template-columns: repeat(18,auto);
-    grid-template-rows: repeat(7, auto);
-    grid-template-areas: 
-    "first_layer" "first_layer"
-    "second_layer" "second_layer";
-    gap: 0px;
-    width: 100%;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: scroll;
+.table {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  align-items: flex-end;
+  margin-top: 15px;
 }
-/* Grid styling ends */
-.table{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: scroll;
+.element_container {
+  display: flexbox; /* It is intentionally set to "flexbox" for specific layout purposes, changing it to flex or any other property may break things */
+  height: 100px !important;
+  flex: 1 1 27px;
+  width: 72.3px;
+  font-size: clamp(10px, 2vw + 1rem, 14px);
+  border-radius: 5px;
+  margin: 0.5 0.5 0.5 0.5;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
 }
-.element_container{
-    display: flexbox;
-    height: 100px;
-    flex: 1 1 27px;
-    max-width: 72.3px;
-    font-size: clamp(10px, 2vw + 1rem, 14px);
-    border-radius: 5px;
-    margin: 1px 1px 1px 1px;
+.element_container:target {
+  animation: element_on_target 1.2s ease-in-out 3;
+  z-index: 5;
 }
-.element_container .atomic_no{
-    width: 100%;
-    text-align: left;
-    font-size: 11px;
+.element_container .definition {
+  margin-top: 100%;
+  margin-bottom: auto;
+  background: var(--frosted_white);
+  text-wrap: wrap;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  border-radius: inherit;
+  height: inherit;
+  width: inherit;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  inset: 0;
+  color: var(--black);
 }
-.element_container .symbol{
-    font-size:clamp(22px, 2vw + 1rem, 32px);
-    font-weight: bold;
-    text-align: center;
+@keyframes element_on_target {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0px var(--red);
+  }
+  30% {
+    transform: scale(1.15);
+    box-shadow: 0 0 30px var(--red);
+  }
+  60% {
+    transform: scale(1);
+    box-shadow: 0 0 5px var(--red);
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0px transparent;
+  }
 }
-.element_container .name{
-    text-align: center;
-    font-size: clamp(10px, 2vw + 1rem, 14px);
-    width: 72px;
-    overflow-wrap: break-word;
+.element_container .atomic_no {
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
+  font-family: jetBrainsMono;
 }
-.element_container .mass{
-    font-size: clamp(10px, 2vw + 1rem, 14px);
-    text-align: center;
+.element_container .symbol {
+  font-size: 28px;
+  font-family: jetBrainsMono;
+  text-align: center;
 }
-/* Layers */
-.first_layer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+.element_container .name {
+  text-align: center;
+  font-size: 12px;
+  font-family: workSans;
+  width: 72px;
+  overflow-wrap: break-word;
 }
-.second_layer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+.element_container .mass {
+  font-size: clamp(10px, 2vw + 1rem, 14px);
+  text-align: center;
+  font-family: jetBrainsMono;
 }
-.third_layer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+.radioactive_elements {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  height: fit-content;
+  margin-left: 50%;
+  margin-right: 50%;
+  transform: translateX(-50%);
+  margin-top: 50px;
+  overflow: scroll;
+  flex-direction: column;
 }
-.group{
-    display: flex;
+.radioactive_elements .element_container {
+  margin: 0 0 2px 2px;
 }
-.fourth_layer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-.fifth_layer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-.sixth_layer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-.seventh_layer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-.radioactive_elements{
-    display: block;
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: scroll;
-    border-radius: 5px;
-    margin-top: 50px;
-}
-.lanthanoids_group , .actinoids_group{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    background: transparent;
+.lanthanoids_group,
+.actinoids_group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: fit-content;
+  background: transparent;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 15px 15px;
+  background: var(--frosted_primary);
 }
 /* On Hover Effects  */
-.element_container:hover{
-    z-index: 5;
-    scale: 1.1;
-    transition: all 0.5s;
-    cursor: pointer;
+.element_container:hover {
+  z-index: 10;
+  scale: 1.1;
+  position: sticky;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  animation: element_on_hover 0.5s ease-in-out 1 forwards;
+  animation-delay: 0.5ms;
 }
-/* VVS Description */
-#iframe_container{
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 1000;
-    background: var(--frosted_white); /* Semi-transparent backdrop */
-    backdrop-filter: blur(5px);
+.definition{
+  display: none;
 }
-#very_short_description{
-    display: none;
-    left: 50%;
-    top: 50%;
-    background: var(--frosted_primary);
-    transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 600px;;
-    height: 400px;
-    border: none;
-    border-radius: 5px;
-    position: fixed;
-    animation: 10s linear;
-    animation-iteration-count: 1;
+.lanthanoids_group:hover .definition,
+.actinoids_group:hover .definition{
+  display: block;
+}
+.blocks:hover .definition{
+  display: block;
+}
+.element_container:hover .definition {
+  margin-top: 0%;
+  transform: translateY(-85%);
+  margin-bottom: auto;
+  overflow-y: scroll;
+  transition: all 0.5s ease-in-out;
+}
+@keyframes element_on_hover {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0px var(--primary);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 30px var(--primary);
+  }
+  100% {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px var(--primary);
+  }
+}
+/* On focus events */
+.definition:focus {
+  display: none;
+}
+/* Exceptions */
+#Rutherfordium:hover .definition {
+  transform: translateY(-99%);
+}
+#Molybdenum:hover .definition {
+  transform: translateY(-99%);
+}
+#Darmstadtium:hover .definition {
+  transform: translateY(-99%);
+}
+#Roentgenium:hover .definition {
+  transform: translateY(-99%);
+}
+#Copernicium:hover .definition {
+  transform: translateY(-99%);
+}
+#Livermorium:hover .definition {
+  transform: translateY(-99%);
+}
+#Mendelevium:hover .definition{
+  transform: translateY(-99%);  
+}
+#Praseodymium:hover .definition{
+  transform: translateY(-99%);
+}
+#Protactinium:hover .definition{
+  transform: translateY(-99%);
+}
+.blocks {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  background: var(--frosted_primary);
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding: 2px;
+  overflow: visible;
+}
+.groups_container {
+  display: flex;
+  flex-direction: row;
+  max-height: fit-content;
+  padding-bottom: 10px;
+}
+#S-block{
+  padding-left: 10px;
+}
+#P-block{
+  padding-right: 10px;
+}
+.groups {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-bottom: 0%;
+  margin-top: auto;
+  padding: 0.5px;
+}
+.groups .element_container {
+  display: block;
+  min-height: 100px !important;
+  min-width: 72.3px !important;
+  max-height: 100px !important;
+  max-width: 72.3px !important;
+  font-size: clamp(10px, 2vw + 1rem, 14px);
+  border-radius: 5px;
+  margin: 1px 1px 1px 1px;
+}
+hr {
+  color: var(--white);
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.table h2 {
+  text-align: center;
+  color: var(--black);
+}
+.sub_groups_container {
+  display: flex;
+  flex-direction: row;
 }

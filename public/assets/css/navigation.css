@@ -1,3 +1,14 @@
-nav{
+.lios-header-nav {
   color: var(--secondary);
+  max-height: fit-content;
+  justify-self: center;
+}
+.lios-nav-title{
+  align-items: center;
+  display: flex;
+}
+.lios-nav-title img {
+  height: 30px;
+  width: 30px;
+  border-radius: 100vh;
 }

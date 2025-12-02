@@ -1,9 +1,18 @@
-nav{
-    --lios-header-nav-background:var(--frosted_white);
-    --lios-segmented-button-background:var(--frosted_white);
-    --lios-segmented-button-border: 2px groove var(--white);
-    --lios-button-on-hover-background: var(--primary);
+:root {
+  --lios-window-border-color: var(--secondary);
+  --lios-loader-3-cube-color: var(--white);
+  --lios-loader-3-trail-color: var(--primary);
+  --lios-loader-3-container-color: var(--secondary);
+  --lios-loader-3-track-color: var(--frosted_white);
 }
-:root{
-    --lios-window-border-color:var(--secondary);
+nav {
+  --lios-header-nav-background: var(--frosted_white);
+  --lios-button-background: var(--frosted_white);
+  --lios-button-on-hover-background: var(--primary);
+}
+
+.lios-window {
+  --lios-button-on-hover-background: var(--primary);
+  --lios-button-border-width: 2px;
+  --lios-button-border-color: var(--secondary);
 }

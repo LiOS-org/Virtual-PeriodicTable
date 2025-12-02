@@ -1,0 +1,18 @@
+.hero-loader{
+    position: fixed;
+    justify-self: center;
+    top: 50%;
+    bottom: 50%;
+}
+.lios-loader-3 div:last-child{
+    overflow: hidden;
+}
+.lios-loader-3 div:last-child::before{
+    content: "";
+    position: relative;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-image: url(../Favicon/500x500.png);
+    transform: rotate(-45deg);
+}

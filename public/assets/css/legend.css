@@ -1,40 +1,32 @@
-.legend{
-    display: flex;
-    max-width: 55%;
-    margin: auto auto;
-    height: auto;
-    padding: auto;
-    background: transparent;
-    border-radius: 5px;
+#legend{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
 }
-.properties{
-    display: flex;
-    width: auto;
-    height: auto;
-    color: var(--black);
-    font-size: 32px;
-    text-align: center;
-    flex-wrap: wrap;
+#legend > .lios-card{
+  display: flex;
+  z-index: unset;
+  margin-bottom: auto;
+  text-align: center;
+  flex-direction: column;
+  background: var(--frosted_primary);
 }
-.properties .properties_group{
-    display: flexbox;
-    background: var(--frosted_primary);
-    width: auto;
-    border-radius: 5px;
-    margin: 10px 10px 10px 10px;
+#legend .lios-card-title{
+  color: var(--black);
 }
-.properties_listing{
-    font-size: 22px;
-    color: var(--frosted_white);
-    text-align: center;
-    height: auto;
-    border-radius: 5px;
-    margin: 10px 10px 10px 10px;
-    display: block;
+#legend .lios-card{
+  margin-top: 2px;
+  color: var(--frosted_white);
+  height: max-content;
 }
-/* On Focus events
-.alkali_metal:hover ~ .alkali_metal {
-    z-index: 5;
-    scale: 1.1;
-    transition: all 0.5s;
-} */
+.lios-card.alkali_matal{
+  background: var(--color_Alkali_Metals);
+}
+.lios-card.states > .lios-button{
+  background: var(--secondary);
+}
+#legend .lios-card .lios-button{
+  margin-top: 2px;
+  border-radius: inherit;
+}

@@ -1,0 +1,13 @@
+{
+    "projectName" : "Virtual Periodic Table",
+    "projectDescription" : "Virtual-PeriodicTable is an open-source project designed to provide a customizable and interactive periodic table. Unlike many existing solutions, this project emphasizes simplicity and accessibility, allowing anyone with basic knowledge of HTML and CSS to modify it according to their preferences.",
+    "baseUrl" : "https://periodictable.liosorg.com",
+    "favicon" : "/assets/Favicon/500x500.png",
+    "cta":[
+        {
+            "View Project" : "https://periodictable.liosorg.com/",
+            "View on Github" : "https://github.com/LiOS-org/Virtual-PeriodicTable",
+            "Alpha Channel" : "https://virtual-periodictable--alpha-yg6impu4.web.app/"
+        }
+    ]
+}

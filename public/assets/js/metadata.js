@@ -32,11 +32,14 @@ try {
     const projectVersionElement = document.querySelector(".project-version");
     const versionNameElement = document.querySelector(".version-name");
     const latestReleaseElement = document.querySelector(".latest-release");
+    const projectChannel = document.querySelector(".channel");
+
     
     if (projectNameElement) projectNameElement.textContent = metadata.projectName;
     if (projectVersionElement) projectVersionElement.textContent = metadata.version;
     if (versionNameElement) versionNameElement.textContent = metadata.versionName;
     if (latestReleaseElement) latestReleaseElement.href = `${metadata.github}/releases/tag/${metadata.version}`;
+    if (projectChannel) projectChannel.textContent = metadata.channel;
     
     // Displaying Licenses
     if (metadata.licenses && Array.isArray(metadata.licenses)) {

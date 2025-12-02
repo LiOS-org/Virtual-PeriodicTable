@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     // Redirect to element page
     const elementContainer = document.querySelectorAll('.element_container');
-    elementContainer.forEach(element => {
-        const name = element.querySelector('.name').textContent;
-        const elementLink = `elements/${name}`;
-        element.addEventListener("click", function () {
-            window.location.href = elementLink;
-        });
-    });
+    // elementContainer.forEach(element => {
+    //     const name = element.querySelector('.name').textContent;
+    //     const elementLink = `elements/${name}`;
+    //     element.addEventListener("click", function () {
+    //         window.location.href = elementLink;
+    //     });
+    // });
     // Legend Filter
     const alkali = document.querySelector('.filter-alkali_metal');
     const alkalineEarth = document.querySelector('.filter-alkaline_earth_metal');

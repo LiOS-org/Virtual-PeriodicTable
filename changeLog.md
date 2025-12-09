@@ -1,5 +1,10 @@
 # Change Logs
 
+## 3.0.1
+
+- Removed jekyll.
+- Updated `LiOS-Open` to latest version.
+  
 ## v3.0.0 - Meta Midnight
 
 - Major overhaul of the codebase to improve performance and maintainability.

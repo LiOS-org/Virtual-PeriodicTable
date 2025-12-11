@@ -517,6 +517,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
 // Hide the loader after the page is fully loaded
 window.addEventListener("load", () => {
     const loader = document.querySelector('.hero-loader');

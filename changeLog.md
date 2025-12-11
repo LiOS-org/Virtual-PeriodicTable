@@ -1,5 +1,9 @@
 # Change Logs
 
+## 3.0.2
+
+- Updated meta description to better reflect the project's purpose.
+
 ## 3.0.1
 
 - Removed jekyll.

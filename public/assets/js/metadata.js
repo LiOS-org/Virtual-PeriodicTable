@@ -67,3 +67,9 @@ try {
     const projectNameElement = document.querySelector(".project-name");
     if (projectNameElement) projectNameElement.textContent = "Virtual Periodic Table";
 }
+
+// Updating meta description
+
+const metaDescriptionTag = document.querySelector('meta[name="description"]');
+metaDescriptionTag.content = metadata.projectDescription
+console.log(metaDescriptionTag.content)

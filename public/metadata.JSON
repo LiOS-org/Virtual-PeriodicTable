@@ -1,6 +1,6 @@
 {
     "projectName" : "Virtual Periodic Table",
-    "version" : "3.0.0",
+    "version" : "3.0.2",
     "versionName" : "Meta Midnight",
     "channel" : "Stable",
     "github" : "https://github.com/LiOS-org/Virtual-PeriodicTable",
@@ -11,7 +11,7 @@
             "copy" : "https://github.com/LiOS-org/Virtual-PeriodicTable?tab=GPL-3.0-1-ov-file"
         }
     ],
-    "projectDescription" : "Virtual-PeriodicTable is an open-source project designed to provide a customizable and interactive periodic table. Unlike many existing solutions, this project emphasizes simplicity and accessibility, allowing anyone with basic knowledge of HTML and CSS to modify it according to their preferences.",
+    "projectDescription" : "A beautifully designed, intuitive, and open-source periodic table built by LiOS.",
     "baseUrl" : "https://periodictable.liosorg.com",
     "favicon" : "/assets/Favicon/500x500.png",
     "cta":{

@@ -9,8 +9,7 @@ This project has been on my mind for years. While there are many websites offeri
 - [x] Add legend/key
 - [x] Simplify and declutter the code
 - [ ] Add an extended info page
+
 ## ScreenShot
 
-
-![image](https://github.com/user-attachments/assets/29fd6720-024f-47ba-a9ff-4508fbfa3d98)
-
+![image](screenshot.jpeg)

@@ -4,6 +4,8 @@
 
 - Added a landing page
 - UI refinement
+- Optimized performance
+- Enhanced readibility for definitions
 
 ## 3.0.2
 

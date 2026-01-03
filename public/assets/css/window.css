@@ -1,6 +1,9 @@
 .lios-window-container {
   color: var(--black);
-  background: var(--frosted_white);
+  --background: var(--frosted_white);
+  background: var(--background);
+  border: 2px outset var(--background);
+  box-sizing: border-box;
   overflow: hidden;
 }
 .lios-window-container > hr{

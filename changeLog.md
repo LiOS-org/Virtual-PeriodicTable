@@ -1,5 +1,10 @@
 # Change Logs
 
+## 3.1.0
+
+- Added a landing page
+- UI refinement
+
 ## 3.0.2
 
 - Updated meta description to better reflect the project's purpose.

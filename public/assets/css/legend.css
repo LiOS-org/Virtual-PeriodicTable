@@ -10,7 +10,9 @@
   margin-bottom: auto;
   text-align: center;
   flex-direction: column;
-  background: var(--frosted_primary);
+  --background: var(--frosted_primary);
+  background: var(--background);
+  border: 2px inset var(--background);
 }
 #legend .lios-card-title{
   color: var(--black);
@@ -24,7 +26,10 @@
   background: var(--color_Alkali_Metals);
 }
 .lios-card.states > .lios-button{
-  background: var(--secondary);
+  --background: var(--secondary);
+  background: var(--background);
+  border: 2px outset var(--background);
+
 }
 #legend .lios-card .lios-button{
   margin-top: 2px;

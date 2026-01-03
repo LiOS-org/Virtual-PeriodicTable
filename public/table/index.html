@@ -1,0 +1,2017 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An open-source, customizable and interactive virtual periodic table built with HTML, CSS and JavaScript.">
+    <link
+      rel="shortcut icon"
+      href="../assets/Favicon/500x500.png"
+      type="image/x-icon"
+    />
+    <title>Virtual Periodic Table</title>
+    <link rel="stylesheet" href="../assets/css/virtual_periodic_table.css" />
+    <script src="../assets/js/main.js"></script>
+  </head>
+  <body>
+    <!-- Loader -->
+     <div class="lios-loader-3 frosted_background hero-loader">
+      <div></div>
+      <div></div>
+     </div>
+
+    <div class="main_container Frosted_Background">
+      <!-- Navigation -->
+      <nav class="lios-header-nav frosted_background frosted_texture">
+        <div class="lios-nav-title"><img src="../assets/Favicon/500x500.png" alt="Virtual Periodic Table"></div>
+        <div class="lios-nav-contents">
+          <div class="lios-button-group">
+            <a href="/table" class="lios-button frosted_background"
+              ><span>Home</span></a
+            >
+            <a
+              href="https://github.com/LiOS-org/Virtual-PeriodicTable"
+              class="lios-button frosted_background"
+              ><span>GitHub</span></a
+            >
+            <div class="lios-button frosted_background header-about-button"
+              ><span>About</span></div
+            >
+          </div>
+        </div>
+      </nav>
+
+      <div id="legend" class="lios-card-container">
+        <div class="lios-card">
+          <div class="lios-card-title"><span>Metals</span></div>
+          <div class="lios-button filter-alkali_metal"><span>Alkali Metal</span></div>
+          <div class="lios-button filter-alkaline_earth_metal"><span>Alkaline Earth Metals</span></div>
+          <div class="lios-button filter-transition_metal"><span>Transition Metals</span></div>
+          <div class="lios-button filter-post_transition_metal"><span>Post Transition Metals</span></div>
+        </div>
+        <div class="lios-card">
+          <div class="lios-card-title"><span>Non Metals</span></div>
+          <div class="lios-button filter-noble_gas"><span>Noble Gases</span></div>
+          <div class="lios-button filter-reactive_nonmetal"><span>Reactive Nonmetals</span></div>
+        </div>
+        <div class="lios-card">
+          <div class="lios-button filter-metalloids"><span>Metalloids</span></div>
+          <div class="lios-button filter-lanthanoids"><span>Lanthanoids</span></div>
+          <div class="lios-button filter-actinoids"><span>Actinoids</span></div>
+          <div class="lios-button filter-synthetic_elements"><span>Synthetic Elements</span></div>
+          <div class="lios-button filter-reset" style="cursor:pointer;"><span>Reset Filters</span></div>
+        </div>
+        <div class="lios-card states">
+          <div class="lios-card-title"><span>States</span></div>
+          <div class="lios-button filter-solid"><span>Solids</span></div>
+          <div class="lios-button filter-liquid"><span>Liquids</span></div>
+          <div class="lios-button filter-gas"><span>Gases</span></div>
+        </div>
+      </div>
+      <div class="table">
+        <div id="S-block" class="blocks">
+          <h2>S-Block</h2>
+          <hr />
+          <div class="groups_container">
+            <div id="1-A" class="groups">
+              <h2>1-A</h2>
+              <!-- New Element -->
+              <div
+                id="Hydrogen"
+                class="element_container reactive_nonmetal gas"
+                data-file="1"
+              >
+                <div class="atomic_no">1</div>
+                <div class="symbol">H</div>
+                <div class="name">Hydrogen</div>
+                <div class="mass">1.008</div>
+                <div class="definition frosted_background">
+                  Hydrogen is the lightest and most abundant chemical element in
+                  the universe. It is highly reactive and forms compounds with
+                  most elements. In its diatomic form (H₂), hydrogen is a
+                  colorless, odorless gas used extensively in chemical processes
+                  and fuel technologies.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Lithium"
+                class="element_container alkali_metal solid"
+                data-file="3"
+              >
+                <div class="atomic_no">3</div>
+                <div class="symbol">Li</div>
+                <div class="name">Lithium</div>
+                <div class="mass">6.94</div>
+                <div class="definition frosted_background">
+                  Lithium is a soft, silvery-white alkali metal. It is the
+                  lightest metal and the least dense solid element. Lithium is
+                  highly reactive and flammable, and it is used in rechargeable
+                  batteries for mobile phones, laptops, digital cameras, and
+                  electric vehicles.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Sodium"
+                class="element_container alkali_metal solid"
+                data-file="11"
+              >
+                <div class="atomic_no">11</div>
+                <div class="symbol">Na</div>
+                <div class="name">Sodium</div>
+                <div class="mass">22.99</div>
+                <div class="definition frosted_background">
+                  Sodium is a highly reactive metal. Its compounds, like table
+                  salt (NaCl) and baking soda, are essential for biological
+                  functions and industrial processes.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Potassium"
+                class="element_container alkali_metal solid"
+                data-file="19"
+              >
+                <div class="atomic_no">19</div>
+                <div class="symbol">K</div>
+                <div class="name">Potassium</div>
+                <div class="mass">39.098</div>
+                <div class="definition frosted_background">
+                  Potassium is a reactive metal vital for nerve function and
+                  agriculture (fertilizers). Found in bananas and used in
+                  fireworks (purple flame).
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Rubidium"
+                class="element_container alkali_metal solid"
+                data-file="37"
+              >
+                <div class="atomic_no">37</div>
+                <div class="symbol">Rb</div>
+                <div class="name">Rubidium</div>
+                <div class="mass">85.468</div>
+                <div class="definition frosted_background">
+                  Rubidium is used in electronics and specialty glasses. It is
+                  highly reactive, igniting spontaneously in air.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Caesium"
+                class="element_container alkali_metal solid"
+                data-file="55"
+              >
+                <div class="atomic_no">55</div>
+                <div class="symbol">Cs</div>
+                <div class="name">Caesium</div>
+                <div class="mass">132.91</div>
+                <div class="definition frosted_background">
+                  Cesium is used in atomic clocks and photoelectric cells. It is
+                  one of the most reactive elements.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Francium"
+                class="element_container alkali_metal solid"
+                data-file="87"
+              >
+                <div class="atomic_no">87</div>
+                <div class="symbol">Fr</div>
+                <div class="name">Francium</div>
+                <div class="mass">(232)</div>
+                <div class="definition frosted_background">
+                  Francium is a highly radioactive metal with minimal
+                  applications due to its rarity and instability.
+                </div>
+              </div>
+            </div>
+            <div id="2-A" class="groups">
+              <h2>2-A</h2>
+              <!-- New Element -->
+              <div
+                id="Beryllium"
+                class="element_container alkaline_earth_metal solid"
+                data-file="4"
+              >
+                <div class="atomic_no">4</div>
+                <div class="symbol">Be</div>
+                <div class="name">Beryllium</div>
+                <div class="mass">9.012</div>
+                <div class="definition frosted_background">
+                  Beryllium is a hard, grayish metal naturally found in mineral
+                  rocks, coal, soil, and volcanic dust. It is used in aerospace
+                  materials due to its stiffness, light weight, and dimensional
+                  stability over a wide temperature range.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Magnesium"
+                class="element_container alkaline_earth_metal solid"
+                data-file="12"
+              >
+                <div class="atomic_no">12</div>
+                <div class="symbol">Mg</div>
+                <div class="name">Magnesium</div>
+                <div class="mass">24.305</div>
+                <div class="definition frosted_background">
+                  Magnesium is a lightweight metal critical for chlorophyll in
+                  plants and energy production in cells. Used in alloys for
+                  aerospace and automotive parts.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Calcium"
+                class="element_container alkaline_earth_metal solid"
+                data-file="20"
+              >
+                <div class="atomic_no">20</div>
+                <div class="symbol">Ca</div>
+                <div class="name">Calcium</div>
+                <div class="mass">40.078</div>
+                <div class="definition frosted_background">
+                  Calcium is essential for bones, teeth, and muscle function.
+                  Used in cement, plaster, and dietary supplements. Reacts
+                  vigorously with water.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Strontium"
+                class="element_container alkaline_earth_metal solid"
+                data-file="38"
+              >
+                <div class="atomic_no">38</div>
+                <div class="symbol">Sr</div>
+                <div class="name">Strontium</div>
+                <div class="mass">87.620</div>
+                <div class="definition frosted_background">
+                  Strontium is used in fireworks and flares for a bright red
+                  color. Also in producing glass for color television cathode
+                  ray tubes.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Barium"
+                class="element_container alkaline_earth_metal solid"
+                data-file="56"
+              >
+                <div class="atomic_no">56</div>
+                <div class="symbol">Ba</div>
+                <div class="name">Barium</div>
+                <div class="mass">137.33</div>
+                <div class="definition frosted_background">
+                  Barium is used in drilling fluids for oil wells and in paints.
+                  It produces a bright green flame.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Radium"
+                class="element_container alkaline_earth_metal solid"
+                data-file="88"
+              >
+                <div class="atomic_no">88</div>
+                <div class="symbol">Ra</div>
+                <div class="name">Radium</div>
+                <div class="mass">(226)</div>
+                <div class="definition frosted_background">
+                  Radium is radioactive and was once used in luminescent paints.
+                  Now used in medicine and as a radiation source.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="D-block" class="blocks">
+          <h2>D-Block</h2>
+          <hr />
+          <div class="groups_container">
+            <div id="3-B" class="groups">
+              <h2>3-B</h2>
+              <!-- New Element -->
+              <div
+                id="Scandium"
+                class="element_container transition_metal solid"
+                data-file="21"
+              >
+                <div class="atomic_no">21</div>
+                <div class="symbol">Sc</div>
+                <div class="name">Scandium</div>
+                <div class="mass">44.956</div>
+                <div class="definition frosted_background">
+                  Scandium is a rare earth metal with high melting point and low
+                  density. Used in aerospace alloys, high-intensity lamps, and
+                  sports equipment like baseball bats and bicycle frames.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Yttrium"
+                class="element_container transition_metal solid"
+                data-file="39"
+              >
+                <div class="atomic_no">39</div>
+                <div class="symbol">Y</div>
+                <div class="name">Yttrium</div>
+                <div class="mass">88.906</div>
+                <div class="definition frosted_background">
+                  Yttrium is used in LED lights, phosphors, and superconductors.
+                  It plays a role in medical technologies and cell biology.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Lanthanoids"
+                class="element_container lanthanoids solid"
+                data-file="lanthanoids"
+              >
+                <div class="atomic_no"></div>
+                <div class="symbol">L</div>
+                <div class="name">Lanthanoids</div>
+                <div class="mass"></div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Actinoids"
+                class="element_container actinoids solid"
+                data-file="actinoids"
+              >
+                <div class="atomic_no"></div>
+                <div class="symbol">A</div>
+                <div class="name">Actinoids</div>
+                <div class="mass"></div>
+              </div>
+            </div>
+            <div id="4-B" class="groups">
+              <h2>4-B</h2>
+              <!-- New Element -->
+              <div
+                id="Titanium"
+                class="element_container transition_metal solid"
+                data-file="22"
+              >
+                <div class="atomic_no">22</div>
+                <div class="symbol">Ti</div>
+                <div class="name">Titanium</div>
+                <div class="mass">47.867</div>
+                <div class="definition frosted_background">
+                  Titanium is a strong, lightweight, corrosion-resistant metal
+                  used in aerospace, medical implants, and high-performance
+                  alloys. Known for its excellent strength-to-weight ratio.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Zirconium"
+                class="element_container transition_metal solid"
+                data-file="40"
+              >
+                <div class="atomic_no">40</div>
+                <div class="symbol">Zr</div>
+                <div class="name">Zirconium</div>
+                <div class="mass">91.224</div>
+                <div class="definition frosted_background">
+                  Zirconium is corrosion-resistant and is used in nuclear
+                  reactors, ceramics, and medical applications.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Hafnium"
+                class="element_container transition_metal solid"
+                data-file="72"
+              >
+                <div class="atomic_no">72</div>
+                <div class="symbol">Hf</div>
+                <div class="name">Hafnium</div>
+                <div class="mass">178.49</div>
+                <div class="definition frosted_background">
+                  Hafnium is used in nuclear reactors, integrated circuits, and
+                  superalloys.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Rutherfordium"
+                class="element_container transition_metal unknown"
+                data-file="104"
+              >
+                <div class="atomic_no">104</div>
+                <div class="symbol">Rf</div>
+                <div class="name">Rutherfordium</div>
+                <div class="mass">(267)</div>
+                <div class="definition frosted_background">
+                  Rutherfordium is used in scientific research. It is a
+                  synthetic element.
+                </div>
+              </div>
+            </div>
+            <div id="5-B" class="groups">
+              <h2>5-B</h2>
+              <!-- New Element -->
+              <div
+                id="Vanadium"
+                class="element_container transition_metal solid"
+                data-file="23"
+              >
+                <div class="atomic_no">23</div>
+                <div class="symbol">V</div>
+                <div class="name">Vanadium</div>
+                <div class="mass">50.942</div>
+                <div class="definition frosted_background">
+                  Vanadium strengthens steel alloys and is used in redox flow
+                  batteries. Named after Vanadis, the Scandinavian goddess of
+                  beauty.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Niobium"
+                class="element_container transition_metal solid"
+                data-file="41"
+              >
+                <div class="atomic_no">41</div>
+                <div class="symbol">Nb</div>
+                <div class="name">Niobium</div>
+                <div class="mass">92.906</div>
+                <div class="definition frosted_background">
+                  Niobium improves the strength of steel alloys and is used in
+                  superconducting materials for powerful magnets.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Tantalum"
+                class="element_container transition_metal solid"
+                data-file="73"
+              >
+                <div class="atomic_no">73</div>
+                <div class="symbol">Ta</div>
+                <div class="name">Tantalum</div>
+                <div class="mass">180.95</div>
+                <div class="definition frosted_background">
+                  Tantalum is highly resistant to corrosion and is used in
+                  high-performance capacitors and surgical implants.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Dubnium"
+                class="element_container transition_metal unknown"
+                data-file="105"
+              >
+                <div class="atomic_no">105</div>
+                <div class="symbol">Db</div>
+                <div class="name">Dubnium</div>
+                <div class="mass">(268)</div>
+                <div class="definition frosted_background">
+                  Dubnium is used in scientific research. It is a synthetic
+                  element.
+                </div>
+              </div>
+            </div>
+            <div id="6-B" class="groups">
+              <h2>6-B</h2>
+              <!-- New Element -->
+              <div
+                id="Chromium"
+                class="element_container transition_metal solid"
+                data-file="24"
+              >
+                <div class="atomic_no">24</div>
+                <div class="symbol">Cr</div>
+                <div class="name">Chromium</div>
+                <div class="mass">51.996</div>
+                <div class="definition frosted_background">
+                  Chromium is known for its shiny finish in stainless steel and
+                  chrome plating. Also used in dyes (chrome yellow) and as a
+                  catalyst.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Molybdenum"
+                class="element_container transition_metal solid"
+                data-file="42"
+              >
+                <div class="atomic_no">42</div>
+                <div class="symbol">Mo</div>
+                <div class="name">Molybdenum</div>
+                <div class="mass">95.95</div>
+                <div class="definition frosted_background">
+                  Molybdenum is used to withstand high temperatures without
+                  expanding or softening greatly. Critical for steel and
+                  chemical industries.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Tungsten"
+                class="element_container transition_metal solid"
+                data-file="74"
+              >
+                <div class="atomic_no">74</div>
+                <div class="symbol">W</div>
+                <div class="name">Tungsten</div>
+                <div class="mass">183.84</div>
+                <div class="definition frosted_background">
+                  Tungsten is known for its high melting point and is used in
+                  light bulb filaments, hard materials, and military
+                  applications.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Seaborgium"
+                class="element_container transition_metal unknown"
+                data-file="106"
+              >
+                <div class="atomic_no">106</div>
+                <div class="symbol">Sg</div>
+                <div class="name">Seaborgium</div>
+                <div class="mass">(269)</div>
+                <div class="definition frosted_background">
+                  Seaborgium is used in scientific research. It is a synthetic
+                  element.
+                </div>
+              </div>
+            </div>
+            <div id="7-B" class="groups">
+              <h2>7-B</h2>
+              <!-- New Element -->
+              <div
+                id="Maganese"
+                class="element_container transition_metal solid"
+                data-file="25"
+              >
+                <div class="atomic_no">25</div>
+                <div class="symbol">Mg</div>
+                <div class="name">Maganese</div>
+                <div class="mass">54.938</div>
+                <div class="definition frosted_background">
+                  Manganese strengthens steel and aluminum alloys. Essential for
+                  photosynthesis in plants and used in dry-cell batteries.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Technetium"
+                class="element_container transition_metal solid"
+                data-file="43"
+              >
+                <div class="atomic_no">43</div>
+                <div class="symbol">Tc</div>
+                <div class="name">Technetium</div>
+                <div class="mass">(98)</div>
+                <div class="definition frosted_background">
+                  Technetium is a radioactive metal used in medical diagnostic
+                  procedures and industrial radiography.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Rhenium"
+                class="element_container transition_metal solid"
+                data-file="75"
+              >
+                <div class="atomic_no">75</div>
+                <div class="symbol">Re</div>
+                <div class="name">Rhenium</div>
+                <div class="mass">186.21</div>
+                <div class="definition frosted_background">
+                  Rhenium is used in jet engines and as a catalyst in petroleum
+                  refining.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Bohrium"
+                class="element_container transition_metal unknown"
+                data-file="107"
+              >
+                <div class="atomic_no">107</div>
+                <div class="symbol">Bh</div>
+                <div class="name">Bohrium</div>
+                <div class="mass">(270)</div>
+                <div class="definition frosted_background">
+                  Bohrium is used in scientific research. It is a synthetic
+                  element.
+                </div>
+              </div>
+            </div>
+            <div id="8" class="groups">
+              <h2>8</h2>
+              <hr />
+              <div class="sub_groups_container">
+                <div class="sub_group">
+                  <!-- New Element -->
+                  <div
+                    id="Iron"
+                    class="element_container transition_metal solid"
+                    data-file="26"
+                  >
+                    <div class="atomic_no">26</div>
+                    <div class="symbol">Fe</div>
+                    <div class="name">Iron</div>
+                    <div class="mass">55.845</div>
+                    <div class="definition frosted_background">
+                      Iron is a fundamental metal in construction and
+                      manufacturing, essential for blood hemoglobin in the body.
+                    </div>
+                  </div>
+                  <!-- New Element -->
+                  <div
+                    id="Ruthenium"
+                    class="element_container transition_metal solid"
+                    data-file="44"
+                  >
+                    <div class="atomic_no">44</div>
+                    <div class="symbol">Ru</div>
+                    <div class="name">Ruthenium</div>
+                    <div class="mass">101.07</div>
+                    <div class="definition frosted_background">
+                      Ruthenium is used in electronics and in alloys with
+                      platinum. It hardens platinum and palladium for electrical
+                      contacts.
+                    </div>
+                  </div>
+                  <!-- New Element -->
+                  <div
+                    id="Osmium"
+                    class="element_container transition_metal solid"
+                    data-file="76"
+                  >
+                    <div class="atomic_no">76</div>
+                    <div class="symbol">Os</div>
+                    <div class="name">Osmium</div>
+                    <div class="mass">190.03</div>
+                    <div class="definition frosted_background">
+                      Osmium is the densest naturally occurring element and is
+                      used in fountain pen nibs and electrical contacts.
+                    </div>
+                  </div>
+                  <!-- New Element -->
+                  <div
+                    id="Hassium"
+                    class="element_container transition_metal unknown"
+                    data-file="108"
+                  >
+                    <div class="atomic_no">108</div>
+                    <div class="symbol">Hs</div>
+                    <div class="name">Hassium</div>
+                    <div class="mass">(277)</div>
+                    <div class="definition frosted_background">
+                      Hassium is used in scientific research. It is a synthetic
+                      element.
+                    </div>
+                  </div>
+                </div>
+                <div class="sub_group">
+                  <!-- New Element -->
+                  <div
+                    id="Cobalt"
+                    class="element_container transition_metal solid"
+                    data-file="27"
+                  >
+                    <div class="atomic_no">27</div>
+                    <div class="symbol">Co</div>
+                    <div class="name">Cobalt</div>
+                    <div class="mass">58.933</div>
+                    <div class="definition frosted_background">
+                      Cobalt is used in alloys for aircraft engine parts and in
+                      batteries. Known for its vibrant blue compounds used in
+                      paints.
+                    </div>
+                  </div>
+                  <!-- New Element -->
+                  <div
+                    id="Rhodium"
+                    class="element_container transition_metal solid"
+                    data-file="45"
+                  >
+                    <div class="atomic_no">45</div>
+                    <div class="symbol">Rh</div>
+                    <div class="name">Rhodium</div>
+                    <div class="mass">102.91</div>
+                    <div class="definition frosted_background">
+                      Rhodium is rare and valuable, used in catalytic converters
+                      and jewelry.
+                    </div>
+                  </div>
+                  <!-- New Element -->
+                  <div
+                    id="Iridium"
+                    class="element_container transition_metal solid"
+                    data-file="77"
+                  >
+                    <div class="atomic_no">77</div>
+                    <div class="symbol">Ir</div>
+                    <div class="name">Iridium</div>
+                    <div class="mass">192.22</div>
+                    <div class="definition frosted_background">
+                      Iridium is a corrosion-resistant metal used in spark
+                      plugs, crucibles, and electrical contacts.
+                    </div>
+                  </div>
+                  <!-- New Element -->
+                  <div
+                    id="Meitnerium"
+                    class="element_container synthetic_elements unknown"
+                    data-file="109"
+                  >
+                    <div class="atomic_no">109</div>
+                    <div class="symbol">Mt</div>
+                    <div class="name">Meitnerium</div>
+                    <div class="mass">(278)</div>
+                    <div class="definition frosted_background">
+                      Meitnerium is used in scientific research. It is a
+                      synthetic element.
+                    </div>
+                  </div>
+                </div>
+                <div class="sub_group">
+                  <!-- New Element -->
+                  <div
+                    id="Nickel"
+                    class="element_container transition_metal solid"
+                    data-file="28"
+                  >
+                    <div class="atomic_no">28</div>
+                    <div class="symbol">Ni</div>
+                    <div class="name">Nickel</div>
+                    <div class="mass">58.693</div>
+                    <div class="definition frosted_background">
+                      Nickel is used in stainless steel, coinage, and
+                      rechargeable batteries. Resistant to corrosion and
+                      oxidation.
+                    </div>
+                  </div>
+                  <!-- New Element -->
+                  <div
+                    id="Palladium"
+                    class="element_container transition_metal solid"
+                    data-file="46"
+                  >
+                    <div class="atomic_no">46</div>
+                    <div class="symbol">Pd</div>
+                    <div class="name">Palladium</div>
+                    <div class="mass">106.42</div>
+                    <div class="definition frosted_background">
+                      Palladium is used in electronics, dentistry, and catalytic
+                      converters. It is flexible and does not tarnish easily.
+                    </div>
+                  </div>
+                  <!-- New Element -->
+                  <div
+                    id="Platinum"
+                    class="element_container transition_metal solid"
+                    data-file="78"
+                  >
+                    <div class="atomic_no">78</div>
+                    <div class="symbol">Pt</div>
+                    <div class="name">Platinum</div>
+                    <div class="mass">195.08</div>
+                    <div class="definition frosted_background">
+                      Platinum is used in jewelry, catalytic converters, and
+                      electronics. It is dense and malleable.
+                    </div>
+                  </div>
+                  <!-- New Element -->
+                  <div
+                    id="Darmstadtium"
+                    class="element_container synthetic_elements unknown"
+                    data-file="110"
+                  >
+                    <div class="atomic_no">110</div>
+                    <div class="symbol">Ds</div>
+                    <div class="name">Darmstadtium</div>
+                    <div class="mass">(281)</div>
+                    <div class="definition frosted_background">
+                      Darmstadtium is used in scientific research. It is a
+                      synthetic element.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="1-B" class="groups">
+              <h2>1-B</h2>
+              <!-- New Element -->
+              <div
+                id="Copper"
+                class="element_container transition_metal solid"
+                data-file="29"
+              >
+                <div class="atomic_no">29</div>
+                <div class="symbol">Cu</div>
+                <div class="name">Copper</div>
+                <div class="mass">63.546</div>
+                <div class="definition frosted_background">
+                  Copper is a highly conductive metal used in electrical wiring,
+                  plumbing, and coin production.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Silver"
+                class="element_container transition_metal solid"
+                data-file="47"
+              >
+                <div class="atomic_no">47</div>
+                <div class="symbol">Ag</div>
+                <div class="name">Silver</div>
+                <div class="mass">107.87</div>
+                <div class="definition frosted_background">
+                  Silver is highly conductive and reflective, used in jewelry,
+                  electronics, and coins.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Gold"
+                class="element_container transition_metal solid"
+                data-file="79"
+              >
+                <div class="atomic_no">79</div>
+                <div class="symbol">Au</div>
+                <div class="name">Gold</div>
+                <div class="mass">196.97</div>
+                <div class="definition frosted_background">
+                  Gold is used in jewelry, electronics, and as a monetary
+                  standard. Known for its malleability and resistance to
+                  corrosion.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Roentgenium"
+                class="element_container synthetic_elements unknown"
+                data-file="111"
+              >
+                <div class="atomic_no">111</div>
+                <div class="symbol">Rg</div>
+                <div class="name">Roentgenium</div>
+                <div class="mass">(282)</div>
+                <div class="definition frosted_background">
+                  Roentgenium is used in scientific research. It is a synthetic
+                  element.
+                </div>
+              </div>
+            </div>
+            <div id="2-B" class="groups">
+              <h2>2-B</h2>
+              <!-- New Element -->
+              <div
+                id="Zinc"
+                class="element_container transition_metal solid"
+                data-file="30"
+              >
+                <div class="atomic_no">30</div>
+                <div class="symbol">Zn</div>
+                <div class="name">Zinc</div>
+                <div class="mass">65.384</div>
+                <div class="definition frosted_background">
+                  Zinc is an essential mineral in nutrition, used in
+                  galvanization to prevent rusting and in alloys.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Cadmium"
+                class="element_container transition_metal solid"
+                data-file="48"
+              >
+                <div class="atomic_no">48</div>
+                <div class="symbol">Cd</div>
+                <div class="name">Cadmium</div>
+                <div class="mass">112.41</div>
+                <div class="definition frosted_background">
+                  Cadmium is used in batteries and pigments. It is toxic and
+                  requires careful handling.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Mercury"
+                class="element_container transition_metal liquid"
+                data-file="80"
+              >
+                <div class="atomic_no">80</div>
+                <div class="symbol">Hg</div>
+                <div class="name">Mercury</div>
+                <div class="mass">200.59</div>
+                <div class="definition frosted_background">
+                  Mercury is the only metal that is liquid at room temperature.
+                  Used in thermometers, barometers, and dental amalgams.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Copernicium"
+                class="element_container synthetic_elements unknown"
+                data-file="112"
+              >
+                <div class="atomic_no">112</div>
+                <div class="symbol">Cn</div>
+                <div class="name">Copernicium</div>
+                <div class="mass">(286)</div>
+                <div class="definition frosted_background">
+                  Copernicium is used in scientific research. It is a synthetic
+                  element.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="P-block" class="blocks">
+          <h2>P-Block</h2>
+          <hr />
+          <div class="groups_container">
+            <div id="3-A" class="groups">
+              <h2>3-A</h2>
+              <!-- New Element -->
+              <div
+                id="Boron"
+                class="element_container metalloids solid"
+                data-file="5"
+              >
+                <div class="atomic_no">5</div>
+                <div class="symbol">B</div>
+                <div class="name">Boron</div>
+                <div class="mass">10.81</div>
+                <div class="definition frosted_background">
+                  Boron is a metalloid essential for plant growth and is
+                  commonly found in compounds such as borax. It is used in
+                  detergents, cosmetics, and as a semiconductor in electronics.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Aluminium"
+                class="element_container post_transition_metal solid"
+                data-file="13"
+              >
+                <div class="atomic_no">13</div>
+                <div class="symbol">Al</div>
+                <div class="name">Aluminium</div>
+                <div class="mass">26.982</div>
+                <div class="definition frosted_background">
+                  Aluminum is a lightweight, corrosion-resistant metal used in
+                  construction, packaging (foil), and transportation. The most
+                  abundant metal in Earth's crust.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Gallium"
+                class="element_container post_transition_metal solid"
+                data-file="31"
+              >
+                <div class="atomic_no">31</div>
+                <div class="symbol">Ga</div>
+                <div class="name">Gallium</div>
+                <div class="mass">69.723</div>
+                <div class="definition frosted_background">
+                  Gallium is used in electronics, such as LEDs and
+                  semiconductors. Melts at around human body temperature.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Indium"
+                class="element_container post_transition_metal solid"
+                data-file="49"
+              >
+                <div class="atomic_no">49</div>
+                <div class="symbol">In</div>
+                <div class="name">Indium</div>
+                <div class="mass">114.82</div>
+                <div class="definition frosted_background">
+                  Indium is used in touchscreens, LCDs, and solders. It is soft,
+                  ductile, and has a low melting point.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Thallium"
+                class="element_container post_transition_metal solid"
+                data-file="81"
+              >
+                <div class="atomic_no">81</div>
+                <div class="symbol">Tl</div>
+                <div class="name">Thallium</div>
+                <div class="mass">204.38</div>
+                <div class="definition frosted_background">
+                  Thallium is used in electronics and pharmaceuticals. It is
+                  toxic and should be handled with care.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Nihonium"
+                class="element_container synthetic_elements unknown"
+                data-file="113"
+              >
+                <div class="atomic_no">113</div>
+                <div class="symbol">Nh</div>
+                <div class="name">Nihonium</div>
+                <div class="mass">(286)</div>
+                <div class="definition frosted_background">
+                  Nihonium is used in scientific research. It is a synthetic
+                  element.
+                </div>
+              </div>
+            </div>
+            <div id="4-A" class="groups">
+              <h2>4-A</h2>
+              <!-- New Element -->
+              <div
+                id="Carbon"
+                class="element_container reactive_nonmetal solid"
+                data-file="6"
+              >
+                <div class="atomic_no">6</div>
+                <div class="symbol">C</div>
+                <div class="name">Carbon</div>
+                <div class="mass">12.011</div>
+                <div class="definition frosted_background">
+                  Carbon is the basis of organic chemistry and forms countless
+                  compounds. It exists in several allotropes including graphite,
+                  diamond, and graphene. Vital for life and industrial
+                  applications like steelmaking.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Silicon"
+                class="element_container metalloids solid"
+                data-file="14"
+              >
+                <div class="atomic_no">14</div>
+                <div class="symbol">Si</div>
+                <div class="name">Silicon</div>
+                <div class="mass">28.085</div>
+                <div class="definition frosted_background">
+                  Silicon is the primary component of semiconductors and solar
+                  cells. Found in sand (SiO₂) and used extensively in
+                  electronics and glassmaking.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Germanium"
+                class="element_container metalloids solid"
+                data-file="32"
+              >
+                <div class="atomic_no">32</div>
+                <div class="symbol">Ge</div>
+                <div class="name">Germanium</div>
+                <div class="mass">72.630</div>
+                <div class="definition frosted_background">
+                  Germanium is used in fiber optic systems, infrared optics, and
+                  solar cell applications.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Tin"
+                class="element_container post_transition_metal solid"
+                data-file="50"
+              >
+                <div class="atomic_no">50</div>
+                <div class="symbol">Sn</div>
+                <div class="name">Tin</div>
+                <div class="mass">118.71</div>
+                <div class="definition frosted_background">
+                  Tin is used in coatings to prevent corrosion and in soldering.
+                  It is malleable and ductile.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Lead"
+                class="element_container post_transition_metal solid"
+                data-file="82"
+              >
+                <div class="atomic_no">82</div>
+                <div class="symbol">Pb</div>
+                <div class="name">Lead</div>
+                <div class="mass">207.20</div>
+                <div class="definition frosted_background">
+                  Lead is used in batteries, radiation shields, and soldering.
+                  It is dense and malleable but toxic.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Flerovium"
+                class="element_container synthetic_elements unknown"
+                data-file="114"
+              >
+                <div class="atomic_no">114</div>
+                <div class="symbol">Fl</div>
+                <div class="name">Flerovium</div>
+                <div class="mass">(289)</div>
+                <div class="definition frosted_background">
+                  Flerovium is used in scientific research. It is a synthetic
+                  element.
+                </div>
+              </div>
+            </div>
+            <div id="5-A" class="groups">
+              <h2>5-A</h2>
+              <!-- New Element -->
+              <div
+                id="Nitrogen"
+                class="element_container reactive_nonmetal gas"
+                data-file="7"
+              >
+                <div class="atomic_no">7</div>
+                <div class="symbol">N</div>
+                <div class="name">Nitrogen</div>
+                <div class="mass">14.007</div>
+                <div class="definition frosted_background">
+                  Nitrogen is a diatomic gas (N₂) constituting 78% of Earth's
+                  atmosphere. Essential for fertilizers (ammonia) and
+                  explosives. Liquid nitrogen is used in cryogenics.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Phosphorus"
+                class="element_container reactive_nonmetal solid"
+                data-file="15"
+              >
+                <div class="atomic_no">15</div>
+                <div class="symbol">P</div>
+                <div class="name">Phosphorus</div>
+                <div class="mass">30.974</div>
+                <div class="definition frosted_background">
+                  Phosphorus is essential for DNA, RNA, and ATP. Used in
+                  fertilizers, detergents, and matches. Exists in white, red,
+                  and black allotropes.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Arsenic"
+                class="element_container metalloids solid"
+                data-file="33"
+              >
+                <div class="atomic_no">33</div>
+                <div class="symbol">As</div>
+                <div class="name">Arsenic</div>
+                <div class="mass">74.922</div>
+                <div class="definition frosted_background">
+                  Arsenic is used in pesticides and electronics. Known for its
+                  toxic properties.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Antimony"
+                class="element_container metalloids solid"
+                data-file="51"
+              >
+                <div class="atomic_no">51</div>
+                <div class="symbol">Sb</div>
+                <div class="name">Antimony</div>
+                <div class="mass">121.76</div>
+                <div class="definition frosted_background">
+                  Antimony is used in flame retardants, semiconductor devices,
+                  and lead-acid batteries.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Bismuth"
+                class="element_container post_transition_metal solid"
+                data-file="83"
+              >
+                <div class="atomic_no">83</div>
+                <div class="symbol">Bi</div>
+                <div class="name">Bismuth</div>
+                <div class="mass">208.98</div>
+                <div class="definition frosted_background">
+                  Bismuth is used in cosmetics, pharmaceuticals, and ammo. It
+                  has a low thermal conductivity.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Moscovium"
+                class="element_container synthetic_elements unknown"
+                data-file="115"
+              >
+                <div class="atomic_no">115</div>
+                <div class="symbol">Mc</div>
+                <div class="name">Moscovium</div>
+                <div class="mass">(290)</div>
+                <div class="definition frosted_background">
+                  Moscovium is used in scientific research. It is a synthetic
+                  element.
+                </div>
+              </div>
+            </div>
+            <div id="6-A" class="groups">
+              <h2>6-A</h2>
+              <!-- New Element -->
+              <div
+                id="Oxygen"
+                class="element_container reactive_nonmetal gas"
+                data-file="8"
+              >
+                <div class="atomic_no">8</div>
+                <div class="symbol">O</div>
+                <div class="name">Oxygen</div>
+                <div class="mass">15.999</div>
+                <div class="definition frosted_background">
+                  Oxygen is a life-sustaining gas (O₂) critical for respiration
+                  and combustion. Ozone (O₃) protects Earth from UV radiation.
+                  Most abundant element in the Earth's crust.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Sulfur"
+                class="element_container reactive_nonmetal solid"
+                data-file="16"
+              >
+                <div class="atomic_no">16</div>
+                <div class="symbol">S</div>
+                <div class="name">Sulfur</div>
+                <div class="mass">32.06</div>
+                <div class="definition frosted_background">
+                  Sulfur is a yellow crystalline solid. Used in sulfuric acid
+                  (industry), gunpowder, and vulcanization of rubber. Smells
+                  like rotten eggs in compounds.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Seleneium"
+                class="element_container reactive_nonmetal solid"
+                data-file="34"
+              >
+                <div class="atomic_no">34</div>
+                <div class="symbol">Se</div>
+                <div class="name">Seleneium</div>
+                <div class="mass">78.971</div>
+                <div class="definition frosted_background">
+                  Selenium is essential in small amounts and is used in the
+                  glass industry and in solar cells.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Tellurium"
+                class="element_container metalloids solid"
+                data-file="52"
+              >
+                <div class="atomic_no">52</div>
+                <div class="symbol">Te</div>
+                <div class="name">Tellurium</div>
+                <div class="mass">127.60</div>
+                <div class="definition frosted_background">
+                  Tellurium is used in metallurgy and electronics. It is a
+                  brittle, mildly toxic metalloid.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Polonium"
+                class="element_container post_transition_metal solid"
+                data-file="84"
+              >
+                <div class="atomic_no">84</div>
+                <div class="symbol">Po</div>
+                <div class="name">Polonium</div>
+                <div class="mass">(209)</div>
+                <div class="definition frosted_background">
+                  Polonium is radioactive and used as a heat source in space
+                  satellites and in antistatic devices.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Livermorium"
+                class="element_container synthetic_elements unknown"
+                data-file="116"
+              >
+                <div class="atomic_no">116</div>
+                <div class="symbol">Lv</div>
+                <div class="name">Livermorium</div>
+                <div class="mass">(293)</div>
+                <div class="definition frosted_background">
+                  Livermorium is used in scientific research. It is a synthetic
+                  element.
+                </div>
+              </div>
+            </div>
+            <div id="7-A" class="groups">
+              <h2>7-A</h2>
+              <!-- New Element -->
+              <div
+                id="Fluorine"
+                class="element_container reactive_nonmetal gas"
+                data-file="9"
+              >
+                <div class="atomic_no">9</div>
+                <div class="symbol">F</div>
+                <div class="name">Fluorine</div>
+                <div class="mass">18.998</div>
+                <div class="definition frosted_background">
+                  Fluorine is the most electronegative element, forming highly
+                  reactive compounds like Teflon and fluoride. Used in
+                  toothpaste to prevent tooth decay.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Chlorine"
+                class="element_container reactive_nonmetal gas"
+                data-file="17"
+              >
+                <div class="atomic_no">17</div>
+                <div class="symbol">Cl</div>
+                <div class="name">Chlorine</div>
+                <div class="mass">35.45</div>
+                <div class="definition frosted_background">
+                  Chlorine is a toxic greenish-yellow gas (Cl₂). Used to
+                  disinfect water, produce PVC plastics, and in bleach. Forms
+                  salts like sodium chloride.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Bromine"
+                class="element_container reactive_nonmetal liquid"
+                data-file="35"
+              >
+                <div class="atomic_no">35</div>
+                <div class="symbol">Br</div>
+                <div class="name">Bromine</div>
+                <div class="mass">79.904</div>
+                <div class="definition frosted_background">
+                  Bromine is used in flame retardants and drilling fluids. It is
+                  a volatile, reddish-brown liquid at room temperature.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Iodine"
+                class="element_container reactive_nonmetal solid"
+                data-file="53"
+              >
+                <div class="atomic_no">53</div>
+                <div class="symbol">I</div>
+                <div class="name">Iodine</div>
+                <div class="mass">126.90</div>
+                <div class="definition frosted_background">
+                  Iodine is used in antiseptics, dyes, and photographic
+                  chemicals. It is essential for thyroid health.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Astatine"
+                class="element_container metalloids solid"
+                data-file="85"
+              >
+                <div class="atomic_no">85</div>
+                <div class="symbol">At</div>
+                <div class="name">Astatine</div>
+                <div class="mass">(210)</div>
+                <div class="definition frosted_background">
+                  Astatine is a rare and radioactive element, used in some
+                  cancer treatments and research.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Tennesine"
+                class="element_container synthetic_elements unknown"
+                data-file="117"
+              >
+                <div class="atomic_no">117</div>
+                <div class="symbol">Ts</div>
+                <div class="name">Tennessine</div>
+                <div class="mass">(294)</div>
+                <div class="definition frosted_background">
+                  Tennessine is used in scientific research. It is a synthetic
+                  element.
+                </div>
+              </div>
+            </div>
+            <div id="8-A" class="groups">
+              <h2>8-A</h2>
+              <!-- New Element -->
+              <div
+                id="Helium"
+                class="element_container noble_gas gas"
+                data-file="2"
+              >
+                <div class="atomic_no">2</div>
+                <div class="symbol">He</div>
+                <div class="name">Helium</div>
+                <div class="mass">4.0026</div>
+                <div class="definition frosted_background">
+                  Helium is a colorless, odorless, tasteless, non-toxic, inert
+                  monatomic gas that heads the noble gas group. It is the second
+                  lightest and second most abundant element in the observable
+                  universe, primarily used in cryogenics and airships.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Neon"
+                class="element_container noble_gas gas"
+                data-file="10"
+              >
+                <div class="atomic_no">10</div>
+                <div class="symbol">Ne</div>
+                <div class="name">Neon</div>
+                <div class="mass">20.180</div>
+                <div class="definition frosted_background">
+                  Neon is a noble gas known for its bright red-orange glow in
+                  neon lights. Chemically inert and used in cryogenics and laser
+                  technology.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Argon"
+                class="element_container noble_gas gas"
+                data-file="18"
+              >
+                <div class="atomic_no">18</div>
+                <div class="symbol">Ar</div>
+                <div class="name">Argon</div>
+                <div class="mass">39</div>
+                <div class="definition frosted_background">
+                  Argon is an inert gas used in welding, lighting, and
+                  preserving historical documents. Third most abundant gas in
+                  Earth's atmosphere.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Krypton"
+                class="element_container noble_gas gas"
+                data-file="36"
+              >
+                <div class="atomic_no">36</div>
+                <div class="symbol">Kr</div>
+                <div class="name">Krypton</div>
+                <div class="mass">83.798</div>
+                <div class="definition frosted_background">
+                  Krypton is a colorless, inert gas used in lighting and
+                  photography.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Xenon"
+                class="element_container noble_gas gas"
+                data-file="54"
+              >
+                <div class="atomic_no">54</div>
+                <div class="symbol">Xe</div>
+                <div class="name">Xenon</div>
+                <div class="mass">131.29</div>
+                <div class="definition frosted_background">
+                  Xenon is used in lamps, anesthesia, and laser technology. It
+                  is a heavy, colorless gas.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Radon"
+                class="element_container noble_gas gas"
+                data-file="86"
+              >
+                <div class="atomic_no">86</div>
+                <div class="symbol">Rn</div>
+                <div class="name">Radon</div>
+                <div class="mass">(222)</div>
+                <div class="definition frosted_background">
+                  Radon is a radioactive gas used in radiation therapy. It can
+                  accumulate in homes from natural uranium decay.
+                </div>
+              </div>
+              <!-- New Element -->
+              <div
+                id="Oganesson"
+                class="element_container synthetic_elements unknown"
+                data-file="118"
+              >
+                <div class="atomic_no">118</div>
+                <div class="symbol">Og</div>
+                <div class="name">Oganesson</div>
+                <div class="mass">(294)</div>
+                <div class="definition frosted_background">
+                  Oganesson is an artificially created element that is expected
+                  to have properties similar to other noble gases. It was first
+                  synthesized in 2002 and remains one of the heaviest elements.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="radioactive_elements">
+        <div class="lanthanoids_group frosted_background">
+          <!-- New element -->
+          <div
+            id="Lanthanum"
+            class="element_container lanthanoids solid"
+            data-file="57"
+          >
+            <div class="atomic_no">57</div>
+            <div class="symbol">La</div>
+            <div class="name">Lanthanum</div>
+            <div class="mass">138.9055</div>
+            <div class="definition frosted_background">
+              Lanthanum is used in camera lenses, electronic vacuum tubes, and
+              catalytic converters.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Cerium"
+            class="element_container lanthanoids solid"
+            data-file="58"
+          >
+            <div class="atomic_no">58</div>
+            <div class="symbol">Ce</div>
+            <div class="name">Cerium</div>
+            <div class="mass">140.12</div>
+            <div class="definition frosted_background">
+              Cerium is used in catalytic converters, glass polishing, and
+              flints for lighters.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Praseodymium"
+            class="element_container lanthanoids solid"
+            data-file="59"
+          >
+            <div class="atomic_no">59</div>
+            <div class="symbol">Pr</div>
+            <div class="name">Praseodymium</div>
+            <div class="mass">140.9075</div>
+            <div class="definition frosted_background">
+              Praseodymium is used in aircraft engines, studio lighting, and
+              permanent magnets.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Neodymium"
+            class="element_container lanthanoids solid"
+            data-file="60"
+          >
+            <div class="atomic_no">60</div>
+            <div class="symbol">Nd</div>
+            <div class="name">Neodymium</div>
+            <div class="mass">144.24</div>
+            <div class="definition frosted_background">
+              Neodymium is used in strong magnets, lasers, and
+              ultraviolet-blocking glass.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Promethium"
+            class="element_container lanthanoids solid"
+            data-file="61"
+          >
+            <div class="atomic_no">61</div>
+            <div class="symbol">Pm</div>
+            <div class="name">Promethium</div>
+            <div class="mass">(145)</div>
+            <div class="definition frosted_background">
+              Promethium is used in luminous paint, atomic batteries, and
+              research.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Samarium"
+            class="element_container lanthanoids solid"
+            data-file="62"
+          >
+            <div class="atomic_no">62</div>
+            <div class="symbol">Sm</div>
+            <div class="name">Samarium</div>
+            <div class="mass">150.36</div>
+            <div class="definition frosted_background">
+              Samarium is used in electronics, lasers, and nuclear reactors.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Europium"
+            class="element_container lanthanoids solid"
+            data-file="63"
+          >
+            <div class="atomic_no">63</div>
+            <div class="symbol">Eu</div>
+            <div class="name">Europium</div>
+            <div class="mass">151.964</div>
+            <div class="definition frosted_background">
+              Europium is used in phosphors, lasers, and neutron capture
+              applications.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Gadolinium"
+            class="element_container lanthanoids solid"
+            data-file="64"
+          >
+            <div class="atomic_no">64</div>
+            <div class="symbol">Gd</div>
+            <div class="name">Gadolinium</div>
+            <div class="mass">157.25</div>
+            <div class="definition frosted_background">
+              Gadolinium is used in MRI contrast agents, phosphors, and
+              high-temperature superconductors.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Terbium"
+            class="element_container lanthanoids solid"
+            data-file="65"
+          >
+            <div class="atomic_no">65</div>
+            <div class="symbol">Tb</div>
+            <div class="name">Terbium</div>
+            <div class="mass">158.93</div>
+            <div class="definition frosted_background">
+              Terbium is used in solid-state devices, fuel cells, and low-energy
+              light bulbs.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Dysprosium"
+            class="element_container lanthanoids solid"
+            data-file="66"
+          >
+            <div class="atomic_no">66</div>
+            <div class="symbol">Dy</div>
+            <div class="name">Dysprosium</div>
+            <div class="mass">162.5</div>
+            <div class="definition frosted_background">
+              Dysprosium is used in magnets, data storage devices, and nuclear
+              reactors.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Holmium"
+            class="element_container lanthanoids solid"
+            data-file="67"
+          >
+            <div class="atomic_no">67</div>
+            <div class="symbol">Ho</div>
+            <div class="name">Holmium</div>
+            <div class="mass">164.9303</div>
+            <div class="definition frosted_background">
+              Holmium is used in magnets, nuclear reactors, and laser devices.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Erbium"
+            class="element_container lanthanoids solid"
+            data-file="68"
+          >
+            <div class="atomic_no">68</div>
+            <div class="symbol">Er</div>
+            <div class="name">Erbium</div>
+            <div class="mass">167.26</div>
+            <div class="definition frosted_background">
+              Erbium is used in optical fibers, amplifiers, and as a nuclear
+              reactor control material.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Thulium"
+            class="element_container lanthanoids solid"
+            data-file="69"
+          >
+            <div class="atomic_no">69</div>
+            <div class="symbol">Tm</div>
+            <div class="name">Thulium</div>
+            <div class="mass">168.934</div>
+            <div class="definition frosted_background">
+              Thulium is used in lasers, X-ray machines, and electronic devices.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Ytterbium"
+            class="element_container lanthanoids solid"
+            data-file="70"
+          >
+            <div class="atomic_no">70</div>
+            <div class="symbol">Yb</div>
+            <div class="name">Ytterbium</div>
+            <div class="mass">173.05</div>
+            <div class="definition frosted_background">
+              Ytterbium improves the strength of stainless steel and is used in
+              lasers.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Lutetium"
+            class="element_container lanthanoids solid"
+            data-file="71"
+          >
+            <div class="atomic_no">71</div>
+            <div class="symbol">Lu</div>
+            <div class="name">Lutetium</div>
+            <div class="mass">174.967</div>
+            <div class="definition frosted_background">
+              Lutetium is used in cancer therapy and as a catalyst in petroleum
+              refining.
+            </div>
+          </div>
+        </div>
+        <div class="actinoids_group frosted_background">
+          <!-- New element -->
+          <div
+            id="Actinium"
+            class="element_container actinoids solid"
+            data-file="89"
+          >
+            <div class="atomic_no">89</div>
+            <div class="symbol">Ac</div>
+            <div class="name">Actinium</div>
+            <div class="mass">(227)</div>
+            <div class="definition frosted_background">
+              Actinium is used in radiation therapy and as a neutron source.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Thorium"
+            class="element_container actinoids solid"
+            data-file="90"
+          >
+            <div class="atomic_no">90</div>
+            <div class="symbol">Th</div>
+            <div class="name">Thorium</div>
+            <div class="mass">232.038</div>
+            <div class="definition frosted_background">
+              Thorium is used in nuclear reactors and was formerly used in gas
+              mantles.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Protactinium"
+            class="element_container actinoids solid"
+            data-file="91"
+          >
+            <div class="atomic_no">91</div>
+            <div class="symbol">Pa</div>
+            <div class="name">Protactinium</div>
+            <div class="mass">231.036</div>
+            <div class="definition frosted_background">
+              Protactinium is used in scientific research. It is a rare and
+              toxic element.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Uranium"
+            class="element_container actinoids solid"
+            data-file="92"
+          >
+            <div class="atomic_no">92</div>
+            <div class="symbol">U</div>
+            <div class="name">Uranium</div>
+            <div class="mass">238.029</div>
+            <div class="definition frosted_background">
+              Uranium is used as fuel in nuclear reactors and weapons. It is a
+              dense, radioactive metal.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Neptunium"
+            class="element_container actinoids solid"
+            data-file="93"
+          >
+            <div class="atomic_no">93</div>
+            <div class="symbol">Np</div>
+            <div class="name">Neptunium</div>
+            <div class="mass">(237)</div>
+            <div class="definition frosted_background">
+              Neptunium is used in research and as a precursor in plutonium
+              production.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Plutonium"
+            class="element_container actinoids solid"
+            data-file="94"
+          >
+            <div class="atomic_no">94</div>
+            <div class="symbol">Pu</div>
+            <div class="name">Plutonium</div>
+            <div class="mass">(244)</div>
+            <div class="definition frosted_background">
+              Plutonium is used as a fuel in nuclear reactors and weapons. It is
+              highly radioactive.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Americium"
+            class="element_container actinoids solid"
+            data-file="95"
+          >
+            <div class="atomic_no">95</div>
+            <div class="symbol">Am</div>
+            <div class="name">Americium</div>
+            <div class="mass">(243)</div>
+            <div class="definition frosted_background">
+              Americium is used in smoke detectors and as a neutron source in
+              industrial applications.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Curium"
+            class="element_container actinoids solid"
+            data-file="96"
+          >
+            <div class="atomic_no">96</div>
+            <div class="symbol">Cm</div>
+            <div class="name">Curium</div>
+            <div class="mass">(247)</div>
+            <div class="definition frosted_background">
+              Curium is used in space exploration as a heat source and for
+              research purposes.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Berkelium"
+            class="element_container actinoids solid"
+            data-file="97"
+          >
+            <div class="atomic_no">97</div>
+            <div class="symbol">Bk</div>
+            <div class="name">Berkelium</div>
+            <div class="mass">(247)</div>
+            <div class="definition frosted_background">
+              Berkelium is used in research, particularly in the synthesis of
+              heavier elements.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Californium"
+            class="element_container actinoids solid"
+            data-file="98"
+          >
+            <div class="atomic_no">98</div>
+            <div class="symbol">Cf</div>
+            <div class="name">Californium</div>
+            <div class="mass">(251)</div>
+            <div class="definition frosted_background">
+              Californium is used in neutron radiography and as a neutron source
+              for research.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Einsteinium"
+            class="element_container actinoids solid"
+            data-file="99"
+          >
+            <div class="atomic_no">99</div>
+            <div class="symbol">Es</div>
+            <div class="name">Einsteinium</div>
+            <div class="mass">(252)</div>
+            <div class="definition frosted_background">
+              Einsteinium is used in scientific research and the synthesis of
+              new elements.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Fermium"
+            class="element_container actinoids solid"
+            data-file="100"
+          >
+            <div class="atomic_no">100</div>
+            <div class="symbol">Fm</div>
+            <div class="name">Fermium</div>
+            <div class="mass">(257)</div>
+            <div class="definition frosted_background">
+              Fermium is used in scientific research. It is a synthetic element.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Mendelevium"
+            class="element_container actinoids solid"
+            data-file="101"
+          >
+            <div class="atomic_no">101</div>
+            <div class="symbol">Md</div>
+            <div class="name">Mendelevium</div>
+            <div class="mass">(258)</div>
+            <div class="definition frosted_background">
+              Mendelevium is used in scientific research. It is named after
+              Dmitri Mendeleev, the creator of the periodic table.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Nobelium"
+            class="element_container actinoids solid"
+            data-file="102"
+          >
+            <div class="atomic_no">102</div>
+            <div class="symbol">No</div>
+            <div class="name">Nobelium</div>
+            <div class="mass">(259)</div>
+            <div class="definition frosted_background">
+              Nobelium is used in scientific research. Named after Alfred Nobel,
+              it is a synthetic element.
+            </div>
+          </div>
+          <!-- New element -->
+          <div
+            id="Lawrencium"
+            class="element_container actinoids solid"
+            data-file="103"
+          >
+            <div class="atomic_no">103</div>
+            <div class="symbol">Lr</div>
+            <div class="name">Lawrencium</div>
+            <div class="mass">(266)</div>
+            <div class="definition frosted_background">
+              Lawrencium is used in scientific research. It is a synthetic
+              element.
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer>
+        <h1>Virtual Periodic Table</h1>
+        <hr />
+        <p>
+          Virtual-PeriodicTable is an open-source project designed to provide a
+          customizable and interactive periodic table. Unlike many existing
+          solutions, this project emphasizes simplicity and accessibility,
+          allowing anyone with basic knowledge of HTML and CSS to modify it
+          according to their preferences.
+        </p>
+        <a href="https://lios-org.web.app" class="LiOS">
+          <div class="element_container alkali_metal solid" data-file="">
+            <div class="atomic_no">3</div>
+            <div class="symbol">Li</div>
+            <div class="name">Lithium</div>
+            <div class="mass">6.94</div>
+          </div>
+
+          <div class="element_container reactive_nonmetal gas" data-file="">
+            <div class="atomic_no">8</div>
+            <div class="symbol">O</div>
+            <div class="name">Oxygen</div>
+            <div class="mass">15.999</div>
+          </div>
+
+          <div class="element_container reactive_nonmetal solid" data-file="">
+            <div class="atomic_no">16</div>
+            <div class="symbol">S</div>
+            <div class="name">Sulfur</div>
+            <div class="mass">32.06</div>
+          </div>
+        </a>
+      </footer>
+    </div>
+    <script type="module" src="../assets/js/metadata.js"></script>
+  </body>
+</html>

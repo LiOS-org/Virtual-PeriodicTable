@@ -1,0 +1,51 @@
+.hero-logo img{
+    size: 1/1;
+    width: clamp(200px, 20vw, 320px);
+    border-radius: 100vh;
+    padding: 10px;
+    display: flex;
+    justify-self: center;
+    --background: var(--frosted_secondary);
+    background: var(--background);
+    border: 2px inset var(--background);
+    box-sizing: border-box;
+    margin: 15px;
+}
+.hero-title{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--white);
+    text-shadow: 2px 2px var(--secondary);
+}
+.hero-description{
+    --background:var(--frosted_primary);
+    background: var(--background);
+    border: 2px inset var(--background);
+    box-sizing: border-box;
+    padding: 15px;
+    width: 95%;
+    display: flex;
+    justify-self: center;
+    border-radius: inherit;
+}
+.hero-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+.hero-buttons a{
+    text-decoration: none;
+    color: var(--white);
+}
+.hero-features-card{
+    --background:var(--frosted_primary);
+    background: var(--background);
+    border: 2px inset var(--background);
+    justify-self: center;
+    margin: 15px;
+}
+.lios-card-title{
+    font-size: 2rem;
+    text-shadow: 2px 2px var(--secondary);
+}

@@ -1,3 +1,25 @@
+// Hide the loader after the page is fully loaded
+window.addEventListener("load", async () => {
+    await optimizeDefinitions()
+    const loader = document.querySelector('.hero-loader');
+    loader.style.display = 'none';
+});
+// 
+// keep definition hidden until hover
+const optimizeDefinitions = async () => {
+    container = document.querySelectorAll('.element_container');
+    container.forEach(element => {
+        element.addEventListener("mouseover", () => {
+            const definition = element.querySelector('.definition');
+            definition.style.display = "flex";
+        });
+        element.addEventListener("mouseout", () => {
+            const definition = element.querySelector('.definition');
+            definition.style.display = "none";
+        });
+    });
+};
+// 
 document.addEventListener("DOMContentLoaded", function () {
     // Adjusts the height of the .table according to the contents within it
     const groups = document.querySelectorAll('.table ');
@@ -518,8 +540,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Hide the loader after the page is fully loaded
-window.addEventListener("load", () => {
-    const loader = document.querySelector('.hero-loader');
-    loader.style.display = 'none';
-});

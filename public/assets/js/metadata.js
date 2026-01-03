@@ -1,3 +1,4 @@
+import { liosWindow } from "../../LiOS-Open/public/modules/JS/liosOpen.js";
 let metadata;
 async function fetchMetadata() {
     let response;
@@ -25,7 +26,9 @@ async function fetchMetadata() {
     // If we get here, none of the paths worked
     throw new Error(`Could not load metadata.JSON from any of the expected locations: ${possiblePaths.join(', ')}. Last error: ${lastError?.message}`);
 }
-try {
+
+const updateAboutWindow = async () => {
+  try {
     await fetchMetadata();
     // Displaying General Informations
     const projectNameElement = document.querySelector(".project-name");
@@ -43,33 +46,106 @@ try {
     
     // Displaying Licenses
     if (metadata.licenses && Array.isArray(metadata.licenses)) {
-        const licenseContainer = document.querySelector(".license-container");
-        if (licenseContainer) {
-            const displayLicenses = (() => {
-                metadata.licenses.forEach(license => {
-                    const newLicense = document.createElement("a");
-                    newLicense.href = license.copy;
-                    newLicense.className = "lios-window-value-row";
-                    newLicense.innerHTML = //html
-                        `<span class = "key">${license.for}</span>
+      const licenseContainer = document.querySelector(".license-container");
+      if (licenseContainer) {
+        const displayLicenses = (() => {
+          metadata.licenses.forEach(license => {
+            const newLicense = document.createElement("a");
+            newLicense.href = license.copy;
+            newLicense.className = "lios-window-value-row";
+            newLicense.innerHTML = //html
+              `<span class = "key">${license.for}</span>
                          <span class = "value"> ${license.license}</span>
                         `;
-                    licenseContainer.appendChild(newLicense);
-                });
-            })();
-        }
+            licenseContainer.appendChild(newLicense);
+          });
+        })();
+      }
     }
     
     console.log("Metadata successfully loaded and applied to the page.");
-} catch (error) {
+  } catch (error) {
     console.error("Failed to load or apply metadata:", error);
     // Optionally show a user-friendly message or use fallback values
     const projectNameElement = document.querySelector(".project-name");
     if (projectNameElement) projectNameElement.textContent = "Virtual Periodic Table";
-}
+  };
+};
 
 // Updating meta description
-
+await fetchMetadata();
 const metaDescriptionTag = document.querySelector('meta[name="description"]');
 metaDescriptionTag.content = metadata.projectDescription
 console.log(metaDescriptionTag.content)
+// LiOS Windows
+const aboutWindow = await liosWindow.new();
+aboutWindow.setId("About");
+aboutWindow.setTitle("About");
+aboutWindow.applyEffect.frostedGlass();
+const aboutWindowContents = //html
+    `          <img
+            src="../assets/Favicon/500x500.png"
+            alt="Virtual Periodic Table"
+            class="favicon"
+          />
+          <div class="lios-window-header project-name"><!-- View metadata.js--></div>
+          <p>
+            Virtual-PeriodicTable is an open-source project designed to provide
+            a customizable and interactive periodic table. Unlike many existing
+            solutions, this project emphasizes simplicity and accessibility,
+            allowing anyone with basic knowledge of HTML and CSS to modify it
+            according to their preferences.
+          </p>
+          <div class="lios-window-card frosted_background">
+            <div class="lios-window-container-title">General Information</div>
+            <a
+              class="lios-window-value-row latest-release"
+              ><span class="key">Version</span
+              ><span class="value project-version"><!-- View metadata.js--></span></a
+            >
+            <div class="lios-window-value-row">
+              <span class="key">Version name</span
+              ><span class="value version-name"><!-- View metadata.js--></span>
+            </div>
+            <div class="lios-window-value-row">
+              <span class="key">Channel</span
+              ><span class="value channel"><!-- View metadata.js--></span>
+            </div>
+            <div class="lios-window-value-row">
+              <span class="key">LiOS-Open Version</span
+              ><span class="value">Unreleased, rolling</span>
+            </div>
+          </div>
+          <div class="lios-window-card license-container frosted_background">
+            <div class="lios-window-container-title">License Information</div>
+            <!-- License are managed via metadata.js -->
+          </div>
+          <div class="lios-window-card frosted_background">
+            <div class="lios-window-container-title">
+              <span>More from Us</span>
+            </div>
+            <div class="lios-button-group more-from-us">
+              <a
+                href="https://liosorg.com"
+                class="lios-button frosted_background"
+                ><span>Visit LiOS</span></a
+              >
+              <a
+                href="https://colors.liosorg.com"
+                class="lios-button frosted_background"
+                ><span>LiOS:Colors</span></a
+              >
+              <a
+                href="https://techinformal.liosorg.com"
+                class="lios-button frosted_background"
+                ><span>Tech Informal</span></a
+              >
+            </div>
+          </div>
+`;
+aboutWindow.setContents(aboutWindowContents);
+document.querySelector(".header-about-button").addEventListener("click", () => {
+  aboutWindow.open();
+  updateAboutWindow();
+});
+// 

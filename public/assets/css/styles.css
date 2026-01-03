@@ -1,6 +1,9 @@
 .main_container {
   border-radius: 5px;
-  background: var(--frosted_white);
+  --background: var(--frosted_white);
+  background: var(--background);
+  border: 2px outset var(--background);
+  box-sizing: border-box;
 }
 :root {
   background: linear-gradient(

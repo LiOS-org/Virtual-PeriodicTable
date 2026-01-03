@@ -12,50 +12,56 @@
 }
 .element_container {
   display: flexbox; /* It is intentionally set to "flexbox" for specific layout purposes, changing it to flex or any other property may break things */
-  height: 100px !important;
-  flex: 1 1 27px;
-  width: 72.3px;
+  --height: 100px;
+  height: var(--height);
+  --width: 72.3px;
+  width: var(--width);
   font-size: clamp(10px, 2vw + 1rem, 14px);
   border-radius: 5px;
-  margin: 0.5 0.5 0.5 0.5;
   transition: all 0.5s ease-in-out;
   overflow: hidden;
+  margin: 1px 1px 1px 1px;
 }
 .element_container:target {
   animation: element_on_target 1.2s ease-in-out 3;
-  z-index: 5;
 }
 .element_container .definition {
   margin-top: 100%;
   margin-bottom: auto;
-  background: var(--frosted_white);
+  --background: var(--frosted_white);
+  background: var(--background);
   text-wrap: wrap;
-  text-align: center;
+  text-align: left;
   transition: all 0.5s ease-in-out;
   border-radius: inherit;
-  height: inherit;
-  width: inherit;
+  height: 100%;
+  width: 100%;
   overflow-x: hidden;
   scrollbar-width: none;
-  inset: 0;
+  border: 2px inset var(--background);
+  box-sizing: border-box;
   color: var(--black);
 }
 @keyframes element_on_target {
   0% {
     transform: scale(1);
     box-shadow: 0 0 0px var(--red);
+    z-index: unset;
   }
   30% {
     transform: scale(1.15);
     box-shadow: 0 0 30px var(--red);
+    z-index: 5;
   }
   60% {
     transform: scale(1);
     box-shadow: 0 0 5px var(--red);
+    z-index: 5;
   }
   100% {
     transform: scale(1.05);
     box-shadow: 0 0 0px transparent;
+    z-index: 5;
   }
 }
 .element_container .atomic_no {
@@ -85,16 +91,18 @@
   display: flex;
   width: fit-content;
   max-width: 100%;
-  height: fit-content;
+  align-self: center;
   margin-left: 50%;
   margin-right: 50%;
   transform: translateX(-50%);
   margin-top: 50px;
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: visible;
   flex-direction: column;
+  align-items: center;
 }
 .radioactive_elements .element_container {
-  margin: 0 0 2px 2px;
+  margin: auto auto 2px 2px;
 }
 .lanthanoids_group,
 .actinoids_group {
@@ -104,12 +112,16 @@
   width: fit-content;
   background: transparent;
   overflow-x: scroll;
-  overflow-y: hidden;
+  overflow-y: auto;
   margin-top: 5px;
   margin-bottom: 5px;
   border-radius: 5px;
-  padding: 15px 15px;
-  background: var(--frosted_primary);
+  --background: var(--frosted_primary);
+  background: var(--background);
+  border: 2px inset var(--background);
+  padding: 15px;
+  box-sizing: content-box;
+  align-items: center;
 }
 /* On Hover Effects  */
 .element_container:hover {
@@ -120,16 +132,12 @@
   transition: all 0.5s ease-in-out;
   animation: element_on_hover 0.5s ease-in-out 1 forwards;
   animation-delay: 0.5ms;
+  width: calc(var(--width) + 15px);
+  height: calc(var(--height) + 5px);
 }
 .definition{
   display: none;
-}
-.lanthanoids_group:hover .definition,
-.actinoids_group:hover .definition{
-  display: block;
-}
-.blocks:hover .definition{
-  display: block;
+  text-align: left;
 }
 .element_container:hover .definition {
   margin-top: 0%;
@@ -188,7 +196,10 @@
   display: flex;
   flex-direction: column;
   width: fit-content;
-  background: var(--frosted_primary);
+  --background: var(--frosted_primary);
+  background: var(--background);
+  border: 2px inset var(--background);
+  box-sizing: border-box;
   border-radius: 5px;
   margin: 2px 2px;
   padding: 2px;
@@ -213,16 +224,6 @@
   margin-bottom: 0%;
   margin-top: auto;
   padding: 0.5px;
-}
-.groups .element_container {
-  display: block;
-  min-height: 100px !important;
-  min-width: 72.3px !important;
-  max-height: 100px !important;
-  max-width: 72.3px !important;
-  font-size: clamp(10px, 2vw + 1rem, 14px);
-  border-radius: 5px;
-  margin: 1px 1px 1px 1px;
 }
 hr {
   color: var(--white);

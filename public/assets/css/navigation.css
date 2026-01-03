@@ -2,6 +2,11 @@
   color: var(--secondary);
   max-height: fit-content;
   justify-self: center;
+  --background : var(--frosted_white);
+  border: 2px outset var(--background);
+}
+.lios-header-nav .lios-button{
+  border: 2px inset var(--background);
 }
 .lios-nav-title{
   align-items: center;

@@ -1,5 +1,9 @@
 # Change Logs
 
+## 3.1.1
+
+- Minor bug fix in `About Window`.
+
 ## 3.1.0
 
 - Added a landing page

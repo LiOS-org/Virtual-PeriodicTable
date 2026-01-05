@@ -14,18 +14,13 @@ async function fetchMetadata() {
             response = await fetch(path);
             if (response.ok) {
                 metadata = await response.json();
-                console.log(`Successfully loaded metadata from: ${path}`);
                 return;
-            }
+          };
         } catch (error) {
             lastError = error;
-            console.log(`Failed to load metadata from ${path}:`, error.message);
-        }
-    }
-    
-    // If we get here, none of the paths worked
-    throw new Error(`Could not load metadata.JSON from any of the expected locations: ${possiblePaths.join(', ')}. Last error: ${lastError?.message}`);
-}
+      };
+  };
+};
 
 const updateAboutWindow = async () => {
   try {
@@ -46,7 +41,8 @@ const updateAboutWindow = async () => {
     
     // Displaying Licenses
     if (metadata.licenses && Array.isArray(metadata.licenses)) {
-      const licenseContainer = document.querySelector(".license-container");
+      const licenseContainer = document.querySelector(".about-license-container");
+      licenseContainer.innerHTML = "";
       if (licenseContainer) {
         const displayLicenses = (() => {
           metadata.licenses.forEach(license => {
@@ -63,9 +59,7 @@ const updateAboutWindow = async () => {
       }
     }
     
-    console.log("Metadata successfully loaded and applied to the page.");
   } catch (error) {
-    console.error("Failed to load or apply metadata:", error);
     // Optionally show a user-friendly message or use fallback values
     const projectNameElement = document.querySelector(".project-name");
     if (projectNameElement) projectNameElement.textContent = "Virtual Periodic Table";
@@ -76,7 +70,6 @@ const updateAboutWindow = async () => {
 await fetchMetadata();
 const metaDescriptionTag = document.querySelector('meta[name="description"]');
 metaDescriptionTag.content = metadata.projectDescription
-console.log(metaDescriptionTag.content)
 // LiOS Windows
 const aboutWindow = await liosWindow.new();
 aboutWindow.setId("About");
@@ -118,7 +111,7 @@ const aboutWindowContents = //html
           </div>
           <div class="lios-window-card license-container frosted_background">
             <div class="lios-window-container-title">License Information</div>
-            <!-- License are managed via metadata.js -->
+            <div class = "about-license-container"></div>
           </div>
           <div class="lios-window-card frosted_background">
             <div class="lios-window-container-title">

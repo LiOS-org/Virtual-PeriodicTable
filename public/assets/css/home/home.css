@@ -1,7 +1,7 @@
 .hero-logo img{
     size: 1/1;
     width: clamp(200px, 20vw, 320px);
-    border-radius: 100vh;
+    border-radius: 15px;
     padding: 10px;
     display: flex;
     justify-self: center;

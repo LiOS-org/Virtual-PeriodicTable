@@ -13,6 +13,6 @@
     background-size: cover;
     height: 100%;
     width: 100%;
-    background-image: url(../Favicon/500x500.png);
+    background-image: url(../Favicon/500x500.svg);
     transform: rotate(-45deg);
 }

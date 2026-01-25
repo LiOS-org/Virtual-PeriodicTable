@@ -3,7 +3,7 @@ let metadata;
 async function fetchMetadata() {
     let response;
     const possiblePaths = [
-        "./metadata.JSON",      // For root index.html
+        "../metadata.JSON",      // For root index.html
         "../../metadata.JSON"   // For elements/xyz/index.html
     ];
     
@@ -77,7 +77,7 @@ aboutWindow.setTitle("About");
 aboutWindow.applyEffect.frostedGlass();
 const aboutWindowContents = //html
     `          <img
-            src="../assets/Favicon/500x500.png"
+            src="../assets/Favicon/500x500.svg"
             alt="Virtual Periodic Table"
             class="favicon"
           />

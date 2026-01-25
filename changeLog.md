@@ -3,6 +3,7 @@
 ## 3.1.2
 
 - Logo Update
+- Update LiOS-Open to latest version
 
 ## 3.1.1
 

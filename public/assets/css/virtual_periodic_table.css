@@ -1,7 +1,7 @@
 /* Additional LiOS-Open modules imports */
-@import url(../../LiOS-Open/public/modules/css/loaders.css);
+@import url(../../LiOS-Open/modules/css/loaders.css);
 /* Virtual Periodic Table Styles */
-@import url(../../LiOS-Open/public/LiOS_Open.css);
+@import url(../../LiOS-Open/LiOS_Open.css);
 @import url(color_palette.css);
 @import url(lios-config.css);
 @import url(loader.css);

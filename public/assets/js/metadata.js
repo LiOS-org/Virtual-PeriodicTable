@@ -1,4 +1,4 @@
-import { liosWindow } from "../../LiOS-Open/public/modules/JS/liosOpen.js";
+import { liosWindow } from "../../LiOS-Open/liosOpen.js";
 let metadata;
 async function fetchMetadata() {
     let response;
